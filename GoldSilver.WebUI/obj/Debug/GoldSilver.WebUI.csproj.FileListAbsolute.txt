@@ -1,0 +1,166 @@
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.csprojResolveAssemblyReference.cache
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.WebUI.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.WebUI.pdb
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Antlr3.Runtime.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.Domain.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Microsoft.Web.Infrastructure.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Moq.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Newtonsoft.Json.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Ninject.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Formatting.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.WebHost.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Mvc.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Optimization.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Providers.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Razor.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Deployment.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Razor.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\WebGrease.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.Domain.pdb
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Moq.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Ninject.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Newtonsoft.Json.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Formatting.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.WebHost.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Mvc.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Razor.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Deployment.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Razor.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.pdb
+C:\Users\sabo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\sabo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.SqlServer.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.WebUI.dll.config
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.WebUI.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.WebUI.pdb
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\Antlr3.Runtime.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.Domain.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\Moq.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\Newtonsoft.Json.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\Ninject.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Formatting.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.WebHost.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Mvc.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Optimization.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Providers.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Razor.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\WebGrease.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.Domain.pdb
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.SqlServer.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\Moq.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\Ninject.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\Newtonsoft.Json.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Formatting.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.WebHost.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Mvc.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Razor.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.csprojResolveAssemblyReference.cache
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.pdb
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.WebUI.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.WebUI.pdb
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Antlr3.Runtime.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.Domain.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Moq.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Newtonsoft.Json.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Ninject.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Formatting.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.WebHost.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Mvc.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Optimization.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Providers.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Razor.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\WebGrease.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.Domain.pdb
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.SqlServer.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Moq.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Ninject.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\Newtonsoft.Json.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Formatting.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.WebHost.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Mvc.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Razor.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.csprojResolveAssemblyReference.cache
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.pdb
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.WebUI.dll.config
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.WebUI.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.WebUI.pdb
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Antlr3.Runtime.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.Domain.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Moq.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Newtonsoft.Json.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Ninject.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Formatting.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Helpers.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.WebHost.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Mvc.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Optimization.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Providers.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Razor.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Deployment.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Razor.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\WebGrease.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\GoldSilver.Domain.pdb
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Moq.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Ninject.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Helpers.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Mvc.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Razor.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Deployment.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.WebPages.Razor.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Newtonsoft.Json.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Formatting.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Http.WebHost.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.pdb
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Castle.Core.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Extensions.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Primitives.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Antlr3.Runtime.pdb
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\Castle.Core.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Extensions.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Net.Http.Primitives.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Optimization.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\bin\System.Web.Providers.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.WebUI\obj\Debug\GoldSilver.WebUI.csproj.App.config

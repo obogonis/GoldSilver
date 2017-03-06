@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldSilver.Domain", "GoldSilver.Domain\GoldSilver.Domain.csproj", "{4C3D498D-4889-4953-9DA9-9CB7202B9B6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldSilver.WebUI", "GoldSilver.WebUI\GoldSilver.WebUI.csproj", "{EEC7BB02-A938-44A0-A727-544782C4D068}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldSilver.Tests", "GoldSilver.Tests\GoldSilver.Tests.csproj", "{FBD771DA-ED21-47DC-A949-57D7A3E851D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C3D498D-4889-4953-9DA9-9CB7202B9B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C3D498D-4889-4953-9DA9-9CB7202B9B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C3D498D-4889-4953-9DA9-9CB7202B9B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C3D498D-4889-4953-9DA9-9CB7202B9B6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEC7BB02-A938-44A0-A727-544782C4D068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC7BB02-A938-44A0-A727-544782C4D068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC7BB02-A938-44A0-A727-544782C4D068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC7BB02-A938-44A0-A727-544782C4D068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBD771DA-ED21-47DC-A949-57D7A3E851D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD771DA-ED21-47DC-A949-57D7A3E851D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD771DA-ED21-47DC-A949-57D7A3E851D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD771DA-ED21-47DC-A949-57D7A3E851D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

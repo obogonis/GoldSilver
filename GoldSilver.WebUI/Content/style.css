@@ -1,0 +1,352 @@
+body{
+   overflow: scroll;
+}
+header{
+	width: 100%;
+}
+nav{
+	height: 120px;
+	line-height: 120px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+/* Menu */
+.navbar-header p{
+	line-height: 20px;
+	font-size: 15px;
+	margin-top: 50px; 
+	text-transform: uppercase;
+	font-style: italic;
+	color: #000000;
+		@import position: fixed;
+	@import left: 100px;
+
+}
+.menu{
+	list-style-type: none;
+}
+.menu li{
+    display:inline-block;
+	padding: 0 40px;
+}
+.menu li a{
+	color: #000000;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+}
+.menu li a:hover,
+.menu li a:focus{
+	text-decoration: none;
+	color:#db3084;
+}
+.active-link{
+	text-decoration: none;
+	color:#db3084 !important;
+}
+
+.logo{
+	height: 90px;
+	margin-left: 40px;
+}
+
+#elios-nav {
+	background-color: white;
+	opacity: 0.4;
+}
+#top-menu{
+	opacity: 1 !important;
+}
+.menu-btn{
+	height: 60px;
+	    background-color: whitesmoke !important;
+
+}
+#icon-color{
+	background-color: #db3084 !important;
+	height: 2px;
+
+}
+
+/* Video background */
+.video-section .pattern-overlay {
+	background-color: rgba(71, 71, 71, 0.59);
+	padding: 220px 0 50px;
+	margin: 0;
+	/*min-height: 1200px; */
+	height: 100%;
+/* Incase of overlay problems just increase the min-height*/
+}
+
+.video-section h1, .video-section h3{
+	text-align:center;
+	color:#fff;
+}
+
+.video-section h1{
+font-size:110px;
+font-family: 'Buenard', serif;
+font-weight:bold;
+text-transform: uppercase;
+margin: 40px auto 0px;
+text-shadow: 1px 1px 1px #000;
+-webkit-text-shadow: 1px 1px 1px #000;
+-moz-text-shadow: 1px 1px 1px #000;
+}
+
+.video-section h3{
+font-size: 25px;
+font-weight:lighter;
+margin: 0px auto 15px;
+}
+
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}
+
+
+/* Wheel section */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html,  body {
+  height: 100%;
+overflow: hidden;
+
+}
+
+#container,  .sections,  .section {
+  position: relative;
+
+  height: 100%;
+}
+
+.section {
+  background-color: white;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+
+/*#section0 { background-image: url(https://unsplash.it/1980/1280?image=1076); }*/
+
+/*#section1 { background-image: url(https://unsplash.it/1980/1280?image=1075); }
+
+#section2 { background-image: url(https://unsplash.it/1980/1280?image=1074); }
+
+#section3 { background-image: url(https://unsplash.it/1980/1280?image=1073); }
+*/
+
+.pages {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  list-style: none;
+}
+
+.pages li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #db3084;
+  margin: 15px 0 0 7px;
+}
+
+.pages li.active {
+  margin-left: 0;
+  width: 14px;
+  height: 14px;
+  border: 4px solid #db3084;
+  background: none;
+}
+  .content-in-center {
+  	padding-top: 200px;
+  }
+
+  /*Catalogue section*/
+  .catalogue-main{
+  	background-color: white;
+  }
+  .image-block{
+  	position: relative;
+  }
+  .image-wrap{
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 0;
+  	height: 100%;
+  	background-color: rgba(219, 48, 132, 0.4);
+  	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+  	opacity: 0;
+  }
+
+ /* .image-block:hover .image-wrap{
+  	opacity: 1;
+  }
+*/
+  .item-descr{
+  	text-align: center;
+  	color: white;
+  	margin: auto;
+  }
+
+  .item-descr a{
+  	color: white;
+  	text-decoration: none;
+  	text-transform: uppercase;
+  	font-size: 25px;
+  }
+
+.item-descr a:hover{
+  	color: white;
+  	text-transform: uppercase;
+  	font-size: 25px;
+  	font-weight: bold;
+  	text-decoration: none;
+  }
+
+  .title-catalogue{
+  	text-align: center;
+  	height: 150px;
+  	line-height: 150px;
+  	padding-top: 50px;
+  }
+
+.title-hr{
+	overflow: hidden;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 40px;
+}
+.title-hr:before,
+.title-hr:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    position: relative;
+}
+.title-hr:before {
+    margin-left: -100%;
+    left: -14px;
+}
+.title-hr:after {
+    margin-right: -100%;
+    right: -14px;
+}
+
+.more-catalogue{
+	text-transform: uppercase;
+	height: 50px;
+	line-height: 50px;
+	font-size:15px;
+	color: black;
+	text-align: right;
+	color:black;
+	padding-right: 0px !important;
+}
+
+.arrow{
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	border-color: transparent;
+	text-align: left;
+	padding-left: 0px !important;
+	padding-top: 16px;
+
+}
+
+ .p0{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.p5{
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+	padding-bottom: 10px;
+}
+.hr{
+	height: 1px;
+	color:black;
+}
+
+/*Advantages block*/
+.adv-block{
+text-align: center;
+padding-top: 30px;
+}
+.adv-block i{
+	font-size: 50px;
+	color:#db3084;
+	padding-bottom: 30px;
+}
+.advantages{
+	background-color: #D6D6D6;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+
+/*Contacts*/
+.contacts-block{
+	text-align: center;
+
+}
+.contacts-block i{
+	font-size: 50px;
+	color:#db3084;
+	padding-bottom: 30px;
+}
+.contacts-block p{
+	color:#5A5B5F; 
+}
+.contacts-block p span{
+	font-weight: bolder;
+}
+.contacts{
+background-color: #F2F2F2;
+}
+
+/*Map*/
+#myModal label { 
+	width: auto!important; 
+	display:inline!important; 
+}
+#myModal img { 
+	max-width: none!important; 
+}
+#mapcanvas {
+	width:760px; 
+	height:600px;
+	margin:auto;
+}
+#modal-size{
+	width: 800px;
+	height: 750px;
+}
+#mapcanvas label { width: auto!important; 
+	display:inline!important; 
+}
+#mapcanvas img { max-width: none!important; 
+}
+.button-map{
+	background-color: #1e2022!important;
+    border-color: #52616a!important;
+    color: #f0f5f9!important;
+}
+
+

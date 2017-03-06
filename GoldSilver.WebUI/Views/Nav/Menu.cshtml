@@ -1,0 +1,56 @@
+﻿@model GoldSilver.WebUI.Models.Menu
+
+<div class="panel panel-default">
+    <div class="panel-heading">By Category</div>
+    <ul class="list-group">
+        @foreach (var link in Model.Categories)
+        {
+            @Html.RouteLink(link.CategoryName, new
+        {
+            controller = "Jewelries",
+            action = "List",
+            category = link.UrlPath,
+            page = 1
+        },
+        new { @class = link.UrlPath == Model.CurrentItem ? "list-group-item active" : "list-group-item" }
+    )
+        }
+    </ul>
+</div>
+
+
+@*<div class="panel panel-default">
+    <div class="panel-heading">By Materials</div>
+    <ul class="list-group">
+        @foreach (var link in Model.Materials)
+        {
+            @Html.RouteLink(link.MaterialName, new
+        {
+            controller = "Jewelries",
+            action = "List",
+            category = link.UrlPath,
+            page = 1
+        },
+        new { @class = link.UrlPath == Model.CurrentItem ? "list-group-item active" : "list-group-item" }
+    )
+        }
+    </ul>
+</div>*@
+
+<div class="panel panel-default">
+    <div class="panel-heading">By Gamestones</div>
+    <ul class="list-group">
+        @foreach (var link in Model.Gemstones)
+        {
+            @Html.RouteLink(link.GemstoneName, new
+        {
+            controller = "Jewelries",
+            action = "List",
+            category = link.UrlPath,
+            page = 1
+        },
+        new { @class = link.UrlPath == Model.CurrentItem ? "list-group-item active" : "list-group-item" }
+    )
+        }
+    </ul>
+</div>

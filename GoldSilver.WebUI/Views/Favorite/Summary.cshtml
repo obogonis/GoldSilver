@@ -1,0 +1,8 @@
+﻿@model GoldSilver.Domain.Entities.Favorite
+
+<div id="cart">
+    <span class="caption">
+        You have @Model.Lines.Count() favorites
+    </span>
+    @Html.ActionLink("View", "Index", "Favorite")
+</div>

@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    @*<link rel="icon" href="../../favicon.ico">*@
+
+    <title>@ViewBag.Title</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="~/Scripts/jquery.tmpl.min.js"></script>
+
+    <script id="jewTmpl" type="text/x-jquery-tmpl">
+        <div class="col-xs-12 col-md-6 col-lg-3 product-description">
+            <div class="row">
+                <div>
+                    <a href="/jewelry/${JewelryId}">
+                        <img width="200" height="200" src="/Jewelries/GetImageForTeaser?JewelryId=${JewelryId}">
+                    </a>
+                </div>
+            </div>
+            <div class="row description-details">
+                <div class="row">
+                    <strong>${Category.CategoryName}</strong>
+                    <br>
+                    <br>
+                </div>
+                <div class="row description-to-show hover-description">
+                    <div class="col-xs-6 col-md-6 col-lg-6">
+                        Вага: <strong>${Weight}</strong>
+                        <br>
+                        Артикул: <strong>${Article}</strong>
+                    </div>
+                    <div class="col-xs-2 col-md-2 col-lg-2 description-to-show-icons">
+                        <form action="/Favorite/AddToFavorites" method="post">
+                            <input data-val="true" data-val-number="The field JewelryId must be a number." data-val-required="The JewelryId field is required." id="JewelryId" name="JewelryId" type="hidden" value="${JewelryId}"><input id="returnUrl" name="returnUrl" type="hidden" value="/">
+                            <button type="submit" class="btn btn-secondary btn-lg">
+                                <i class="glyphicon glyphicon-hover glyphicon-heart-empty"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-xs-2 col-md-2 col-lg-2 description-to-show-icons">
+                        <button type="submit" class="btn btn-secondary btn-lg">
+                            <a href="/jewelry/${JewelryId}"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+</head>
+
+<body>
+    <div class="navbar-wrapper">
+        <div class="container">
+
+            <nav id="menu" class="navbar navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">gold&silver</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#about">Favorites</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            @*                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>*@
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    <!-- /.navbar -->
+
+    <div class="container">
+
+        <div class="row row-offcanvas row-offcanvas-right">
+
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                @{ Html.RenderAction("Menu", "Nav"); }
+            </div>
+            <!--/span-->
+
+            <div class="col-xs-12 col-sm-9">
+
+                @RenderBody()
+
+                <!--/row-->
+            </div>
+            <!--/span-->
+
+        </div>
+        <!--/row-->
+
+        <hr>
+
+        <footer>
+            <p>&copy; Company 2014</p>
+        </footer>
+
+    </div>
+    <!--/.container-->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script>
+        $(document).ready(function () {
+            $('.glyphicon-hover').hover(function () {
+                $(this).addClass('glyphicon-heart').removeClass('glyphicon-heart-empty');
+            }, function () {
+                $(this).removeClass('glyphicon-heart').addClass('glyphicon-heart-empty');
+            });
+
+            $('.product-description').hover(function () {
+                $(this).find('.description-to-show').removeClass('hover-description');
+            }, function () {
+                $(this).find('.description-to-show').addClass('hover-description');
+            });
+        });
+
+        $('.service1-item').click(function () {
+            var newURL = '/Jewelries/GetImageById?imageId=' + $(this).attr("img-id");
+
+            $("#item-display").attr("src", newURL);
+        });
+
+        var data = { "JewelryId": 1, "Name": "New Jew 1", "Description": "New description. . Popularity = 3", "Article": "111", "Weight": 1.00, "MaterialId": 1, "GemstoneId": 1, "Fineness": 555, "Popularity": 3, "CategoryId": 1, "ImageData": null, "ImageMimeType": null, "Set": "1", "PrevJewelry": 0, "NextJewelry": 0, "ImageId": null, "Images": null, "Category": { "CategoryId": 1, "CategoryName": "Rings", "Order": 1, "UrlPath": "ring" }, "Material": null, "Gemstone": { "GemstoneId": 1, "GemstoneName": "Diamond", "Order": 1, "UrlPath": "diamond" } };
+
+
+        $(document).ready(function () {
+
+            var id = $('#Set').val();
+
+            jQuery.ajax({
+                url: '/Jewelries/GetJewelryBySet?set=' + id,
+                success: function (result) {
+                    $('#jewTmpl').tmpl(result).appendTo('#jewelries-set');
+                }
+            });
+        });
+    </script>
+
+    @Scripts.Render("~/bundles/additional");
+    @RenderSection("scripts", required: false)
+</body>
+</html>

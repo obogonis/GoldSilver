@@ -1,0 +1,116 @@
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.csprojResolveAssemblyReference.cache
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Tests.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Tests.pdb
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Domain.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Moq.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Ninject.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Domain.pdb
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Moq.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Ninject.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.pdb
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.WebUI.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Optimization.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.WebHost.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\WebGrease.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Net.Http.Formatting.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Newtonsoft.Json.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Antlr3.Runtime.dll
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.WebUI.pdb
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.WebHost.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Net.Http.Formatting.xml
+c:\users\sabo\documents\visual studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sabo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\EntityFramework.dll
+C:\Users\sabo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\EntityFramework.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Tests.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Tests.pdb
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Domain.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.WebUI.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Moq.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Ninject.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\EntityFramework.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\WebGrease.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Antlr3.Runtime.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Domain.pdb
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.WebUI.pdb
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Moq.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Ninject.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\EntityFramework.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.csprojResolveAssemblyReference.cache
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.dll
+C:\Users\obog\Documents\Visual Studio 2015\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.pdb
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Tests.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Tests.pdb
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Domain.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.WebUI.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Moq.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Ninject.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\EntityFramework.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\WebGrease.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Antlr3.Runtime.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Domain.pdb
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.WebUI.pdb
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Moq.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Ninject.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\EntityFramework.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.csprojResolveAssemblyReference.cache
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.dll
+C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.pdb
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Tests.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Tests.pdb
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Domain.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.WebUI.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Moq.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Ninject.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\EntityFramework.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Optimization.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.WebHost.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.WebPages.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Razor.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\WebGrease.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Net.Http.Formatting.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Newtonsoft.Json.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Antlr3.Runtime.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Domain.pdb
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.WebUI.pdb
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Moq.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Ninject.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Mvc.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Http.WebHost.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.WebPages.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.Razor.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Net.Http.Formatting.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\Newtonsoft.Json.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.dll
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\obj\Debug\GoldSilver.Tests.pdb
+\\Mac\Home\Documents\Projects\GoldSilver\GoldSilver.Tests\bin\Debug\GoldSilver.Tests.dll.config

@@ -1,0 +1,15 @@
+﻿@model IEnumerable<GoldSilver.Domain.Entities.Jewelry>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Favorites</h2>
+
+<div class="row feature">
+    @{ foreach (var j in Model)
+       {
+           Html.RenderPartial("JewelSummary", j);
+       }
+    }
+</div>

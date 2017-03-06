@@ -1,0 +1,63 @@
+﻿@model GoldSilver.Domain.Entities.Jewelry
+
+<div class="col-xs-12 col-md-6 col-lg-4 product-description">
+
+
+    @if (Model.Images.Count > 0)
+    {
+        <div class="row">
+            <div>
+                <a href="@Url.Action("Details", new { id = @Model.JewelryId })">
+                    <img width="200" height="200" src="@Url.Action("GetImageForTeaser", "Jewelries", new { Model.JewelryId })" />
+                </a>
+            </div>
+        </div>
+    }
+@*<h2>@Html.RouteLink(@Model.Name, "JeweleryDetails", new { id = @Model.JewelryId })</h2>*@
+@*<p class="description">@Model.Description</p>*@
+    <div class="row description-details">
+        <div class="row">
+            <strong>@Model.Category.CategoryName</strong>
+            <br />
+            <br />
+        </div>
+        <div class="row hover-description description-to-show">
+            <div class="col-xs-6 col-md-6 col-lg-6">
+                Метал: <strong>@Model.Material.MaterialName</strong>
+                <br />
+                Вага: <strong>@Model.Weight</strong>
+                <br />
+                Артикул: <strong>@Model.Article</strong>
+            </div>
+            <div class="col-xs-2 col-md-2 col-lg-2 description-to-show-icons">
+                @using (Html.BeginForm("AddToFavorites", "Favorite"))
+                {
+                    @Html.HiddenFor(x => x.JewelryId)
+                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+
+                    <button type="submit" class="btn btn-secondary btn-lg">
+                        <i class="glyphicon glyphicon-heart-empty glyphicon-hover"></i>
+                    </button>
+
+                }
+            </div>
+            <div class="col-xs-2 col-md-2 col-lg-2 description-to-show-icons">
+                <button type="submit" class="btn btn-secondary btn-lg">
+                    <a href="@Url.Action("Details", new { id = @Model.JewelryId })"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <h4></h4>
+
+
+
+    @*   @using (Html.BeginForm("RemoveFromFavorites", "Favorite"))
+    {
+        @Html.HiddenFor(x => x.JewelryId)
+        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+        <input class="btn btn-secondary" type="submit" value="Remove from Favorite" role="button" />
+    }*@
+
+</div>

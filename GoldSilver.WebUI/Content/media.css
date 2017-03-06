@@ -1,0 +1,228 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	#mapcanvas {
+	width:700px; 
+	height:600px;
+	margin:auto;
+}
+#modal-size{
+	width: 750px;
+	height: 750px;
+}
+.descr-adv{
+	font-size: 20px;
+}
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	#mapcanvas {
+	width:600px; 
+	height:600px;
+	margin:auto;
+}
+#modal-size{
+	width: 680px;
+	height: 750px;
+}
+#main-title-video{
+	font-size: 80px;
+}
+.descr-adv{
+	font-size: 15px;
+}
+	
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	nav{
+		width: 100%;
+	height: 120px;
+	line-height: 120px;
+	z-index:9999; 
+}
+#top_menu{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.img{
+	height: 90px;
+	margin-left: 22px;
+}
+
+	.menu li{
+		display: block;
+		background-color: white;
+		opacity: 0,5;
+	}
+
+.menu li a{
+	display: block;
+}
+.menu li a:hover{
+}
+.menu-btn {
+	margin-top: 30px;
+}
+#mapcanvas{
+	width:420px; 
+	height:350px;
+}
+#modal-size{
+	width: 460px;
+	height: 500px;
+}
+#main-title-video{
+	font-size: 50px;
+}
+.descr-adv{
+	font-size: 12px;
+}
+.small-title{
+	font-size: 15px;
+	padding-top: 20px;
+}
+.logo{
+	margin-left: 0px;
+}
+.title-hr{
+	padding-top: 5px;
+}
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	
+		nav{
+			width: 100%;
+	height: 120px;
+	line-height: 120px;
+}
+#top_menu{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.img{
+	height: 90px;
+	margin-left: 22px;
+}
+
+	.menu li{
+		display: block;
+		background-color: white;
+		opacity: 0,5;
+	}
+
+.menu li a{
+	display: block;
+}
+.menu li a:hover{
+}
+.menu-btn {
+	margin-top: 30px;
+}
+#mapcanvas{
+	width:400px; 
+	height:300px;
+}
+#modal-size{
+	width: 450px;
+	height: 450px;
+}
+#main-title-video{
+	font-size: 30px;
+}
+.descr-adv{
+	font-size: 10px;
+}
+.small-title{
+	font-size: 15px;
+	padding-top: 20px;
+}
+.logo{
+	margin-left: 0px;
+}
+}
+	
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+nav{
+	width: 100%;
+	height: 120px;
+	line-height: 120px;
+}
+#top_menu{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.img{
+	height: 90px;
+	margin-left: 22px;
+}
+.menu li{
+	display: block;
+	background-color: white;
+	opacity: 0,5;
+}
+.menu li a{
+	display: block;
+}
+.menu li a:hover{
+}
+.menu-btn {
+	margin-top: 30px;
+	color: red;
+}
+#mapcanvas{
+	width:250px; 
+	height:180px;
+}
+#modal-size{
+	width: 300px;
+	height: 280px;
+}
+#main-title-video{
+	font-size: 20px;
+}
+.descr-adv{
+	font-size: 10px;
+}
+.small-title{
+	font-size: 15px;
+	padding-top: 20px;
+}
+.logo{
+	margin-left: 0px;
+}
+}
