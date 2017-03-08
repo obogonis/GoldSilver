@@ -14,8 +14,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="~/Scripts/jquery.tmpl.min.js"></script>
 
-    @Scripts.Render("~/bundles/modernizr")
-    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")*@
     
 
     <script id="jewTmpl" type="text/x-jquery-tmpl">
@@ -63,7 +63,7 @@
 <body>
     <header>
         <nav class="navbar navbar-fixed-top">
-            <div class="container-fluid">
+            <div class="container-fluid big-size">
                 <div class="row">
                     <div class="navbar-header">
                         <!-- Icon humburger-->
@@ -87,14 +87,13 @@
                     </div>
                 </div>
             </div>
-            </div>
         </nav>
 
     </header>
 
         <div class="container">
 
-        <div class="row row-offcanvas row-offcanvas-right">
+        <div class="row row-offcanvas row-offcanvas-right main-contant">
 
             <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
                 @{ Html.RenderAction("Menu", "Nav"); }

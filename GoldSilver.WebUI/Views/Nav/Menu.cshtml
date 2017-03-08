@@ -1,7 +1,7 @@
 ﻿@model GoldSilver.WebUI.Models.Menu
 
-<div class="panel panel-default">
-    <div class="panel-heading">By Category</div>
+<div class="left-menu">
+    <h2 class="menu-title">By Category</h2>
     <ul class="list-group">
         @foreach (var link in Model.Categories)
         {
@@ -37,8 +37,8 @@
     </ul>
 </div>*@
 
-<div class="panel panel-default">
-    <div class="panel-heading">By Gamestones</div>
+<div class="left-menu">
+    <h2 class="menu-title">By Gamestones</h2>
     <ul class="list-group">
         @foreach (var link in Model.Gemstones)
         {
