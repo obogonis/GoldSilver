@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 
 namespace GoldSilver.WebUI.Infrastructure
@@ -14,7 +15,11 @@ namespace GoldSilver.WebUI.Infrastructure
             MemoryStream ms = new MemoryStream(byteArrayIn);
             Image image = Image.FromStream(ms);
 
-            using (Image watermarkImage = Image.FromFile(@"C:\Users\obo\Documents\Visual Studio 2012\Projects\GoldSilver\GoldSilver.WebUI\Content\img\watermark.png"))
+            WebClient wc = new WebClient();
+            byte[] bytes = wc.DownloadData(new Uri(HttpContext.Current.Request.Url, "/Content/img/watermark.png"));
+            MemoryStream msWatermark = new MemoryStream(bytes);
+
+            using (Image watermarkImage = Image.FromStream(msWatermark))
             using (Graphics imageGraphics = Graphics.FromImage(image))
             using (TextureBrush watermarkBrush = new TextureBrush(watermarkImage))
             {
