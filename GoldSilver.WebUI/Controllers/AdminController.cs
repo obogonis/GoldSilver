@@ -42,28 +42,31 @@ namespace GoldSilver.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (files != null)
+                if ((files != null) && (files.Count() > 0))
                 {
                     foreach (var image in files)
                     {
-                        Image img = new Image();
-
-                        if (repository.Images.Count() > 0)
-                            img.Id = repository.Images.Max(i => i.Id) + 1;
-                        else
-                            img.Id = 1;
-
                         if (image != null)
                         {
-                            img.ImageMimeType = image.ContentType;
-                            img.ImageData = new byte[image.ContentLength];
-                            image.InputStream.Read(img.ImageData, 0, image.ContentLength);
+                            Image img = new Image();
+
+                            if (repository.Images.Count() > 0)
+                                img.Id = repository.Images.Max(i => i.Id) + 1;
+                            else
+                                img.Id = 1;
+
+                            if (image != null)
+                            {
+                                img.ImageMimeType = image.ContentType;
+                                img.ImageData = new byte[image.ContentLength];
+                                image.InputStream.Read(img.ImageData, 0, image.ContentLength);
+                            }
+
+                            if (jewelry.Images == null)
+                                jewelry.Images = new List<Image>();
+
+                            jewelry.Images.Add(img);
                         }
-
-                        if (jewelry.Images == null)
-                            jewelry.Images = new List<Image>();
-
-                        jewelry.Images.Add(img);
                     }
                 }
 

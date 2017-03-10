@@ -16,12 +16,17 @@ namespace GoldSilver.WebUI
             routes.MapRoute(null,
             "",
             new
-                {
-                    controller = "Jewelries",
-                    action = "List",
-                    category = (string)null,
-                    page = 1
-                }
+            {
+                controller = "Home",
+                action = "Index",
+                category = (string)null,
+                page = 1
+            }
+            );
+
+            routes.MapRoute("Jeweleries",
+                "jewelries",
+                new { controller = "Jewelries", action = "List" }
             );
 
             routes.MapRoute("JeweleryDetails",

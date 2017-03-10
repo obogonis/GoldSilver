@@ -61,7 +61,7 @@ nav{
 
 .logo{
 	height: 90px;
-	margin-left: 40px;
+	/*margin-left: 40px;*/
 }
 
 #elios-nav {
@@ -569,4 +569,14 @@ description-to-show-icons button{
 
 .product-big-image img{
     margin: 0 auto;
+}
+
+.glyphicon-big {
+    font-size: 25px;
+    margin-top: 150px;
+    opacity: 0.2;
+}
+
+.glyphicon-big:hover {
+    opacity:1;
 }

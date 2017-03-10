@@ -59,7 +59,7 @@ namespace GoldSilver.WebUI.Controllers
                 return HttpNotFound();
             }
 
-            /*need to refactor*/
+            /*TODO: need to refactor*/
             try { jew.PrevJewelry = repository.Jewelries.Find(id - 1).JewelryId; }
             catch { }
             try { jew.NextJewelry = repository.Jewelries.Find(id + 1).JewelryId; }
@@ -216,7 +216,7 @@ namespace GoldSilver.WebUI.Controllers
         {
             Image image = repository.Images.Find(imageId);
 
-            if (image != null)
+            if ((image != null) && (image.ImageData != null))
             {
                 WebImage resizedImg = new WebImage(image.ImageData)
                                                 .Resize(200, 200)
@@ -224,16 +224,15 @@ namespace GoldSilver.WebUI.Controllers
 
                 return File(resizedImg.GetBytes(), resizedImg.ImageFormat);
             }
-            else
-                return null;
 
+            return null;
         }
 
         public FileContentResult GetImageById(int imageId)
         {
             Image image = repository.Images.Find(imageId);
 
-            if (image != null)
+            if ((image != null) && (image.ImageData != null))
             {
                 return File(ImageHelper.AddWatermark(image.ImageData), image.ImageMimeType);
             }
@@ -255,13 +254,13 @@ namespace GoldSilver.WebUI.Controllers
                 {
                     Image img = jew.Images.OrderBy(i => i.Id).First();
 
-                    return File(ImageHelper.AddWatermark(img.ImageData), img.ImageMimeType);
+                    if (img.ImageData != null)
+                        return File(ImageHelper.AddWatermark(img.ImageData), img.ImageMimeType);
                 }
-                else
-                    return null;
+
             }
-            else
-                return null;
+
+            return null;
         }
 
         public FileContentResult GetImage(int jewelryId, int imageOrder = 1)
@@ -297,17 +296,18 @@ namespace GoldSilver.WebUI.Controllers
                 {
                     Image img = jew.Images.OrderBy(i => i.Id).First();
 
-                    WebImage resizedImg = new WebImage(img.ImageData)
-                                                .Resize(200, 200)
-                                                .Crop(1, 1);
+                    if (img.ImageData != null)
+                    {
+                        WebImage resizedImg = new WebImage(img.ImageData)
+                                                    .Resize(200, 200)
+                                                    .Crop(1, 1);
+                        return File(resizedImg.GetBytes(), resizedImg.ImageFormat);
 
-                    return File(resizedImg.GetBytes(), resizedImg.ImageFormat);
+                    }
                 }
-                else
-                    return null;
             }
-            else
-                return null;
+
+            return null;
         }
 
     }
