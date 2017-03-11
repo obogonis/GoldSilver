@@ -8,43 +8,51 @@
 <h2>Список всіх виробів</h2>
 
 @* Sorting buttons *@
-@Html.ActionLink("Sort by Name", "List", new
+
+<div style="font-size: 18px; line-height: 1.5em;">
+
+    Сортувати по:
+
+    <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i><span class="sr-only">Example of sort</span>
+    @Html.ActionLink("Назві", "List", new
 {
     page = Model.PagingInfo.page,
     category = Model.CurrentCategory,
     sortBy = "Name",
     sortDirection = "ASC"
 })
-|
-@Html.ActionLink("Sort by Weight", "List", new
+    |
+    <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i><span class="sr-only">Example of sort</span>
+    @Html.ActionLink("Вазі", "List", new
 {
     page = Model.PagingInfo.page,
     category = Model.CurrentCategory,
     sortBy = "Weight",
     sortDirection = "ASC"
 })|
-@Html.ActionLink("Sort by Popularity", "List", new
+    <i class="fa fa-sort-amount-asc" aria-hidden="true"></i><span class="sr-only">Example of sort</span>
+    @Html.ActionLink("Популярності", "List", new
 {
     page = Model.PagingInfo.page,
     category = Model.CurrentCategory,
     sortBy = "Popularity",
     sortDirection = "ASC"
 })
-|
-@Html.ActionLink("Standart sorting", "List", new
+    |
+    @Html.ActionLink("Стандартне", "List", new
 {
     page = Model.PagingInfo.page,
     category = Model.CurrentCategory,
     sortBy = "Standart",
     sortDirection = "ASC"
 })
-
+</div>
 
 <div class="row feature">
     @{ foreach (var j in Model.Jewelries)
-       {
-           Html.RenderPartial("JewelSummary", j);
-       }
+        {
+            Html.RenderPartial("JewelSummary", j);
+        }
     }
 </div>
 
@@ -86,4 +94,6 @@
             }
         });
     });
+
+
 </script>
