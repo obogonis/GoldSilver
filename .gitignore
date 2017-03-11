@@ -1,0 +1,8 @@
+.vs/config/applicationhost.config
+GoldSilver.Domain/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+.vs/GoldSilver/v14/.suo
+GoldSilver.Domain/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.cache
+GoldSilver.WebUI/obj/Debug/GoldSilver.WebUI.csproj.FileListAbsolute.txt
+*.dll
+GoldSilver.WebUI/obj/Debug/GoldSilver.WebUI.pdb
