@@ -336,7 +336,7 @@
                         </div>
                         <div>
                             <div id="instagram-block" class="row">
-                                <div class="col-md-2 col-sm-4 col-xs-4 p5">
+                                @*<div class="col-md-2 col-sm-4 col-xs-4 p5">
                                     <div class="image-block">
                                         <div class="image-wrap">
                                             <div class="item-descr">
@@ -395,7 +395,7 @@
                                         </div>
                                         <img src="/Content/img/inst-photo04.jpg" alt="" class="img-responsive">
                                     </div>
-                                </div>
+                                </div>*@
                             </div>
                         </div>
                     </div>
@@ -446,12 +446,12 @@
 
         jQuery(function ($) {
 
-            var tok = '4784593495.365dc12.d696e4dd661f45479bafe4d03e9bb036';
-            userid = 'id3043155184';
-            cnt = 4;
+            var tok = '3043155184.2f7669c.6813de387fa448bdb738d5d371ffa44c';
+            userid = '3043155184';
+            cnt = 18;
 
             $.ajax({
-                url: 'https://api.instagram.com/v1/users/4784593495/media/recent',
+                url: 'https://api.instagram.com/v1/users/3043155184/media/recent',
                 dataType: 'jsonp',
                 type: 'GET',
                 data: { access_token: tok, count: cnt }, // передаем параметры, которые мы указывали выше
