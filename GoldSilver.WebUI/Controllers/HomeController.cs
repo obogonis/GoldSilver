@@ -16,5 +16,10 @@ namespace GoldSilver.WebUI.Controllers
             return View();
         }
 
+        public ActionResult Contacts()
+        {
+            return View();
+        }
+
     }
 }
