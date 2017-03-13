@@ -631,20 +631,31 @@ description-to-show-icons button {
     height: 100%;
 }
 
-.glyphicon {
-    width: 30px !important;
-}
 
 .form-box .contacts-block i {
     font-size: 40px;
 }
 
 .instra-image-block {
-        width: 180px;
+    width: 180px;
     height: 180px;
+    position: relative;
 }
 
-.instra-item-descr-video {
+.instra-item-descr-video, .instra-item-descr-img {
     position:absolute;
-
+    top: 15px;
+    left: 130px;
+    opacity:0.9;
+    color: #db3084;
 }
+
+
+
+ #instagram-block .image-wrap {
+     opacity:0.8;
+ }
+
+ #instagram-block .glyphicon {
+     font-size: 30px;
+ }
