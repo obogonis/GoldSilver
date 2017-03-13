@@ -9,44 +9,102 @@
 
 @* Sorting buttons *@
 
-<div style="font-size: 18px; line-height: 1.5em;">
+<label class="mr-sm-2" for="inlineFormCustomSelect">Сортувати по:</label>
+<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="sortSelect">
+    <option value="standart" @(((ViewBag.Sort == "Standart") || ViewBag.Sort == "") ? "selected" : "")>Стандартне</option>
+    <option value="name" @((ViewBag.Sort == "Name") ? "selected" : "")>Назві</option>
+    <option value="weight" @(((ViewBag.Sort == "Weight") || ViewBag.Sort == "") ? "selected" : "")>Вазі</option>
+    <option value="popularity" @(((ViewBag.Sort == "Popularity") || ViewBag.Sort == "") ? "selected" : "")>Популярності</option>
+</select>
 
-    Сортувати по:
 
-    <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i><span class="sr-only">Example of sort</span>
-    @Html.ActionLink("Назві", "List", new
-{
-    page = Model.PagingInfo.page,
-    category = Model.CurrentCategory,
-    sortBy = "Name",
-    sortDirection = "ASC"
-})
-    |
-    <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i><span class="sr-only">Example of sort</span>
-    @Html.ActionLink("Вазі", "List", new
-{
-    page = Model.PagingInfo.page,
-    category = Model.CurrentCategory,
-    sortBy = "Weight",
-    sortDirection = "ASC"
-})|
-    <i class="fa fa-sort-amount-asc" aria-hidden="true"></i><span class="sr-only">Example of sort</span>
-    @Html.ActionLink("Популярності", "List", new
-{
-    page = Model.PagingInfo.page,
-    category = Model.CurrentCategory,
-    sortBy = "Popularity",
-    sortDirection = "ASC"
-})
-    |
-    @Html.ActionLink("Стандартне", "List", new
-{
-    page = Model.PagingInfo.page,
-    category = Model.CurrentCategory,
-    sortBy = "Standart",
-    sortDirection = "ASC"
-})
-</div>
+<script>
+    $("#sortSelect").change(function () {
+        var sortBy = $("#sortSelect option:selected").val();
+        var url = window.location.href;
+        var direction = 'ASC';
+
+        switch (sortBy) {
+
+            case 'standart':
+                url = url.split('?')[0];
+                break;
+
+            case 'name':
+                url = addUrlParameter(url, 'sortBy', 'Name');
+                url = addUrlParameter(url, 'sortDirection', direction);
+                break;
+
+            case 'weight':
+                url = addUrlParameter(url, 'sortBy', 'Weight');
+                url = addUrlParameter(url, 'sortDirection', direction);
+                break;
+
+            case 'popularity':
+                url = addUrlParameter(url, 'sortBy', 'Popularity');
+                url = addUrlParameter(url, 'sortDirection', direction);
+                break;
+        }
+
+        window.location.href = url;
+
+    });
+
+    function addUrlParameter(url, param, paramVal) {
+        var newUrl;
+
+        if (url.indexOf(param) > -1) {
+            newUrl = updateURLParameter(url, param, paramVal);
+        } else if (url.indexOf('?') > -1) {
+            newUrl = url + '&' + param + '=' + paramVal;
+        } else {
+            newUrl = url + '?' + param + '=' + paramVal;
+        }
+
+        return newUrl;
+    }
+
+    function updateURLParameter(url, param, paramVal) {
+        var TheAnchor = null;
+        var newAdditionalURL = "";
+        var tempArray = url.split("?");
+        var baseURL = tempArray[0];
+        var additionalURL = tempArray[1];
+        var temp = "";
+
+        if (additionalURL) {
+            var tmpAnchor = additionalURL.split("#");
+            var TheParams = tmpAnchor[0];
+            TheAnchor = tmpAnchor[1];
+            if (TheAnchor)
+                additionalURL = TheParams;
+
+            tempArray = additionalURL.split("&");
+
+            for (var i = 0; i < tempArray.length; i++) {
+                if (tempArray[i].split('=')[0] != param) {
+                    newAdditionalURL += temp + tempArray[i];
+                    temp = "&";
+                }
+            }
+        }
+        else {
+            var tmpAnchor = baseURL.split("#");
+            var TheParams = tmpAnchor[0];
+            TheAnchor = tmpAnchor[1];
+
+            if (TheParams)
+                baseURL = TheParams;
+        }
+
+        if (TheAnchor)
+            paramVal += "#" + TheAnchor;
+
+        var rows_txt = temp + "" + param + "=" + paramVal;
+        return baseURL + "?" + newAdditionalURL + rows_txt;
+    }
+
+</script>
 
 <div class="row feature">
     @{ foreach (var j in Model.Jewelries)

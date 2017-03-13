@@ -83,7 +83,7 @@ namespace GoldSilver.WebUI.Controllers
             else
                 orderByFunc = item => item.JewelryId;
 
-
+            ViewBag.Sort = sortBy;
 
             JewelriesListViewModel model = new JewelriesListViewModel()
             {
