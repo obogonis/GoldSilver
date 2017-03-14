@@ -1,86 +1,116 @@
 ﻿@model IEnumerable<GoldSilver.Domain.Entities.Jewelry>
 
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
-
-<h2>Index</h2>
-
-
-<table class="Grid">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th class="NumericCol">
-            @Html.DisplayNameFor(model => model.Article)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Weight)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Material)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gemstone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fineness)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Category)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Popularity)
-        </th>
-        <th>Action</th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td class="NumericCol">
-                @Html.DisplayFor(modelItem => item.Article)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Material.MaterialName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gemstone.GemstoneName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fineness)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.CategoryName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Popularity)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.JewelryId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.JewelryId }) |
-                @using (Html.BeginForm("Delete", "Admin", new { jewelryId = item.JewelryId }))
-                { <input type="submit" value="Delete" /> }
-            </td>
-        </tr>
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
     }
 
-</table>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+    <div class="container">
+        <h2>Адміністрування ювелірних виробів</h2>
+
+        <p>
+            <span class="alert alert-success hidden" id="success-message"></span>
+            <span class="alert alert-danger hidden" id="danger-message"></span>
+        </p>
+
+        <p>
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success" })
+        </p>
+
+        <table class="table table-striped table-bordered table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th class="NumericCol">
+                    @Html.DisplayNameFor(model => model.Article)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Weight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Material)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gemstone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fineness)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Popularity)
+                </th>
+                <th>Action</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr id="row-@item.JewelryId">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td class="NumericCol">
+                        @Html.DisplayFor(modelItem => item.Article)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Weight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Material.MaterialName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gemstone.GemstoneName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fineness)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Popularity)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.JewelryId }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("View", "Details", "Jewelries", new { id = item.JewelryId }, new { @class = "btn btn-success" })
+                        <a href="#" onclick="deleteJew(@item.JewelryId);" class="btn btn-danger glyphicon glyphicon-remove"></a>
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+
+    <script>
+        function deleteJew(id) {
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Delete",
+                data: { 'jewelryId': id },
+                success: function (data) {
+                    $("#success-message").removeClass('hidden');
+                    $('#success-message').text('Ювелірний виріб з id=' + id + ' успішно видалений!');
+
+                    $('#row-' + id).remove();
+                },
+                error: function (data) {
+                    $("#danger-message").removeClass('hidden');
+                    $('#danger-message').text('Сталася помилка при видаленні ювелірного виробу з id=' + id + '!');
+
+                }
+            });
+        }
+
+    </script>

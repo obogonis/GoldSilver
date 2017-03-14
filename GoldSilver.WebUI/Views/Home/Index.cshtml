@@ -480,7 +480,7 @@
 
                         if (result.data[x].type == 'video')
                         {
-                            $('#instagram-block').append('<div class="col-md-2 col-sm-4 col-xs-4 p5">' +
+                            $('#instagram-block').append('<div class="col-md-2 col-sm-4 col-xs-4 p5 hover-block">' +
                             '<div class="instra-image-block">' +
                             '<div class="image-wrap">' +
                             '<div class="instra-item-descr-video">' +
@@ -514,17 +514,21 @@
 
             $(".player").mb_YTPlayer();
 
-            $(".image-block").hover(function () {
-                $(this).find(".image-wrap").animate({ width: "100%", opacity: 1 }, 500);
-            }, function () {
-                $(this).find(".image-wrap").animate({ width: "0", opacity: 0 }, 500);
-            });
+            //$(".image-block").hover(function () {
+            //    $(this).find(".image-wrap").animate({ width: "100%", opacity: 1 }, 500);
+            //}, function () {
+            //    $(this).find(".image-wrap").animate({ width: "0", opacity: 0 }, 500);
+            //});
 
-            $(".instra-image-block").hover(function () {
-                $(this).find(".instra-item-descr-video").animate({ opacity: 0.9 }, 500);
-            }, function () {
-                $(this).find(".instra-item-descr-video").animate({ opacity: 0 }, 500);
-            });
+            //$(".hover-play").hover(function () {
+            //    $(this).find(".instra-item-descr-video").animate({ opacity: 0 }, 500);
+            //}, function () {
+            //    $(this).find(".instra-item-descr-video").animate({ opacity: 0 }, 500);
+            //});
+
+            //$('.hover-play').mouseover(function () {
+            //    $(this).find(".instra-item-descr-video").animate({ opacity: 0 }, 500);
+            //});
         });
 
         $(document).ready(function () {
