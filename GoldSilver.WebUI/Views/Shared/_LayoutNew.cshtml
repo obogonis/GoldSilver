@@ -133,10 +133,25 @@
             });
         });
 
-        $('.service1-item').click(function () {
-            var newURL = '/Jewelries/GetImageById?imageId=' + $(this).attr("img-id");
+        $('.service1-item').hover(function (event) {
+            event.preventDefault();
 
-            $("#item-display").attr("src", newURL);
+            if ($(this).find(".fa").hasClass("fa-circle"))
+                return;
+
+            $(".service1-item").find(".fa").removeClass("fa-circle").addClass("fa-circle-o");
+
+            var newURL = '/Jewelries/GetImageById?imageId=' + $(this).attr("img-id");
+            $("#item-display").animate({ opacity: "0" }, 100, function () {
+                $(this).attr("src", newURL);
+                $(this).animate({ opacity: "1" }, 100);
+            });
+
+            $(this).find(".fa").removeClass("fa-circle-o").addClass("fa-circle", 500);
+        });
+
+        $('.service1-item').click(function (event) {
+            event.preventDefault();
         });
 
         var data = { "JewelryId": 1, "Name": "New Jew 1", "Description": "New description. . Popularity = 3", "Article": "111", "Weight": 1.00, "MaterialId": 1, "GemstoneId": 1, "Fineness": 555, "Popularity": 3, "CategoryId": 1, "ImageData": null, "ImageMimeType": null, "Set": "1", "PrevJewelry": 0, "NextJewelry": 0, "ImageId": null, "Images": null, "Category": { "CategoryId": 1, "CategoryName": "Rings", "Order": 1, "UrlPath": "ring" }, "Material": null, "Gemstone": { "GemstoneId": 1, "GemstoneName": "Diamond", "Order": 1, "UrlPath": "diamond" } };

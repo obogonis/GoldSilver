@@ -43,14 +43,12 @@
 
                         <div class="container col-sm-12 col-md-12 col-lg-12 pull-left row">
 
-                            <div id="teaser-img-container" class="row center-block">
+                            <div id="teaser-img-container" class="center-block">
                                 @foreach (var image in Model.Images)
                                 {
-                                    <div class="col-md-4">
-                                        <a id="item-1" class="service1-item" img-id="@image.Id">
-                                            <img src="@Url.Action("GetImageTeaserById", "Jewelries", new { imageId = image.Id })" alt="" ></img>
+                                        <a href id="item-1" class="service1-item" img-id="@image.Id">
+                                            <i class="fa fa-circle-o fa-2" aria-hidden="true"></i> @*<img src="@Url.Action("GetImageTeaserById", "Jewelries", new { imageId = image.Id })" alt="" ></img>*@
                                         </a>
-                                    </div>
                                 }
 
                             </div>

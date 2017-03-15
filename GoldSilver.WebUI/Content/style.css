@@ -553,6 +553,9 @@ description-to-show-icons button {
     max-width: 100%;
 }
 
+.center-block {
+    text-align: center;
+}
 
 .service1-items {
     padding: 0px 0 0px 0;
@@ -565,12 +568,11 @@ description-to-show-icons button {
 }
 
 .service1-item {
-    height: 107px;
-    width: 120px;
-    display: block;
-    float: left;
-    position: relative;
-    padding-right: 20px;
+    padding-right: 15px;
+}
+
+.service1-item:hover {
+    text-decoration:none;
 }
 
     .service1-item > img {
