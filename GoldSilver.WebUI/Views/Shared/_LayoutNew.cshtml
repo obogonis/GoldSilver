@@ -119,7 +119,8 @@
 
     </div>
 <script>
-        $(document).ready(function () {
+    $(document).ready(function () {
+            
             $('.glyphicon-hover').hover(function () {
                 $(this).addClass('glyphicon-heart').removeClass('glyphicon-heart-empty');
             }, function () {
@@ -130,6 +131,21 @@
                 $(this).find('.description-to-show').removeClass('hover-description');
             }, function () {
                 $(this).find('.description-to-show').addClass('hover-description');
+            });
+
+
+            $('#slider-box').bind('mousewheel', function (e) {
+                if (e.originalEvent.wheelDelta / 120 > 0) {
+                    var activeLink = $(this).find(".active");
+                    activeLink.removeClass("active");
+
+                    var nextLink = activeLink.next(".service1-item");
+                    nextLink.addClass("active");
+                    $('#slider-box').find(".active").trigger('hover');
+                }
+                else {
+                    $(this).text('scrolling down !');
+                }
             });
         });
 
@@ -147,14 +163,15 @@
                 $(this).animate({ opacity: "1" }, 100);
             });
 
+            $("#teaser-img-container").find(".service1-item").removeClass("active");
             $(this).find(".fa").removeClass("fa-circle-o").addClass("fa-circle", 500);
+            $(this).addClass("active");
         });
+
 
         $('.service1-item').click(function (event) {
             event.preventDefault();
         });
-
-        var data = { "JewelryId": 1, "Name": "New Jew 1", "Description": "New description. . Popularity = 3", "Article": "111", "Weight": 1.00, "MaterialId": 1, "GemstoneId": 1, "Fineness": 555, "Popularity": 3, "CategoryId": 1, "ImageData": null, "ImageMimeType": null, "Set": "1", "PrevJewelry": 0, "NextJewelry": 0, "ImageId": null, "Images": null, "Category": { "CategoryId": 1, "CategoryName": "Rings", "Order": 1, "UrlPath": "ring" }, "Material": null, "Gemstone": { "GemstoneId": 1, "GemstoneName": "Diamond", "Order": 1, "UrlPath": "diamond" } };
 
 
         $(document).ready(function () {

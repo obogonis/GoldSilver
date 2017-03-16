@@ -35,7 +35,7 @@
                     }
                 </div>
 
-                <div class="col-sm-10 col-md-5 col-lg-5">
+                <div id="slider-box" class="col-sm-10 col-md-5 col-lg-5">
                     <div class="row">
                         <div class="product col-sm-12 col-md-12 col-lg-12 row">
                             <img id="item-display" class="center-block" src="@Url.Action("GetMainImageById", "Jewelries", new { Model.JewelryId })" alt="">
@@ -44,10 +44,12 @@
                         <div class="container col-sm-12 col-md-12 col-lg-12 pull-left row">
 
                             <div id="teaser-img-container" class="center-block">
-                                @foreach (var image in Model.Images)
+
+                                @for (int i =0; i < Model.Images.Count; i++)
                                 {
-                                        <a href id="item-1" class="service1-item" img-id="@image.Id">
-                                            <i class="fa fa-circle-o fa-2" aria-hidden="true"></i> @*<img src="@Url.Action("GetImageTeaserById", "Jewelries", new { imageId = image.Id })" alt="" ></img>*@
+
+                                        <a href id="item-1" class="service1-item @((i == 0) ?  "active" : "")" img-id="@Model.Images.ToArray()[i].Id">
+                                            <i class="fa @((i == 0) ?  "fa-circle" : "fa-circle-o") fa-2" aria-hidden="true"></i> @*<img src="@Url.Action("GetImageTeaserById", "Jewelries", new { imageId = image.Id })" alt="" ></img>*@
                                         </a>
                                 }
 
