@@ -310,5 +310,10 @@ namespace GoldSilver.WebUI.Controllers
             return null;
         }
 
+        public string GetListOfImages(int jewelryId)
+        {
+            var list = repository.Images.Where(i => i.JewelryId == jewelryId).Select(i => i.Id);
+            return JsonConvert.SerializeObject(list);
+        }
     }
 }

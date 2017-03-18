@@ -74,7 +74,8 @@ namespace GoldSilver.Domain.Entities
         [HiddenInput(DisplayValue = false)]
         public string ImageMimeType { get; set; }
         public string ImageDescription { get; set; }
-
+        public int JewelryId { get; set; }
+        public Jewelry Jewelery { get; set; }
     }
 
     public class Material

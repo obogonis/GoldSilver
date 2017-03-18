@@ -6,3 +6,12 @@ GoldSilver.Domain/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 GoldSilver.WebUI/obj/Debug/GoldSilver.WebUI.csproj.FileListAbsolute.txt
 *.dll
 GoldSilver.WebUI/obj/Debug/GoldSilver.WebUI.pdb
+*.dll
+*.pdb
+GoldSilver.Domain/obj/Debug/GoldSilver.Domain.csprojResolveAssemblyReference.cache
+*.dll
+*.dll
+GoldSilver.WebUI/bin/GoldSilver.Domain.pdb
+*.pdb
+*.dll
+GoldSilver.WebUI/obj/Debug/GoldSilver.WebUI.pdb

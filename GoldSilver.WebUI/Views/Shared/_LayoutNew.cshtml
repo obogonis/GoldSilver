@@ -134,17 +134,100 @@
             });
 
 
-            $('#slider-box').bind('mousewheel', function (e) {
-                if (e.originalEvent.wheelDelta / 120 > 0) {
-                    var activeLink = $(this).find(".active");
-                    activeLink.removeClass("active");
+            var listOfImages = null;
+            var currentPos= 0;
+            var jewId = $("#JewelryId").val();
 
-                    var nextLink = activeLink.next(".service1-item");
-                    nextLink.addClass("active");
-                    $('#slider-box').find(".active").trigger('hover');
+            $.ajax({
+                method: "POST",
+                url: "/Jewelries/GetListOfImages",
+                data: { jewelryId: jewId },
+                success: function (response) {
+                    listOfImages = JSON.parse(response);
+                    activeImageId = listOfImages[0];
                 }
-                else {
-                    $(this).text('scrolling down !');
+            });
+
+            function MoveNextImage()
+            {
+                currentPos++;
+
+                if (currentPos > (listOfImages.length - 1))
+                    currentPos = 0;
+                if (currentPos < 0)
+                    currentPos = listOfImages.length - 1;
+
+                var activeLink = $("#teaser-img-container").find(".active");
+                activeLink.removeClass("active");
+
+                var nextLink = activeLink.next(".service1-item");
+                nextLink.addClass("active");
+
+                $(".fa-circle").removeClass("fa-circle").addClass("fa-circle-o");
+
+                $("#teaser-img-container .service1-item").each(function (index, value) {
+                    if ($(value).attr("img-id") == listOfImages[currentPos]) {
+                        $(this).addClass("active");
+                        $(this).find("i").removeClass("fa-circle-o").addClass("fa-circle");
+                    }
+                });
+
+                var newURL = '/Jewelries/GetImageById?imageId=' + listOfImages[currentPos];
+
+                $("#item-display").animate({ opacity: "0" }, 100, function () {
+                    $(this).attr("src", newURL);
+                    $(this).animate({ opacity: "1" }, 100);
+                });
+            }
+
+            function MovePrevImage() {
+                currentPos--;
+
+                if (currentPos > (listOfImages.length - 1))
+                    currentPos = 0;
+                if (currentPos < 0)
+                    currentPos = listOfImages.length - 1;
+
+                var activeLink = $("#teaser-img-container").find(".active");
+                activeLink.removeClass("active");
+
+                var prevLink = activeLink.prev(".service1-item");
+                prevLink.addClass("active");
+
+                $(".fa-circle").removeClass("fa-circle").addClass("fa-circle-o");
+
+                $("#teaser-img-container .service1-item").each(function (index, value) {
+                    if ($(value).attr("img-id") == listOfImages[currentPos])
+                    {
+                        $(this).addClass("active");
+                        $(this).find("i").removeClass("fa-circle-o").addClass("fa-circle");
+                    }
+                });
+
+                //activeLink.find(".fa").removeClass("fa-circle").addClass("fa-circle-o", 100);
+                //prevLink.find(".fa").removeClass("fa-circle-o").addClass("fa-circle", 100);
+
+
+                var newURL = '/Jewelries/GetImageById?imageId=' + listOfImages[currentPos];
+
+                $("#item-display").animate({ opacity: "0" }, 100, function () {
+                    $(this).attr("src", newURL);
+                    $(this).animate({ opacity: "1" }, 100);
+                });
+            }
+
+
+            $('#slider-box').bind('mousewheel', function (e) {
+                e.preventDefault();
+                if (Math.abs(e.originalEvent.wheelDelta) > 50) {
+                    if (e.originalEvent.wheelDelta / 120 > 0) {
+
+                        MoveNextImage();
+                    }
+                    else {
+
+                        MovePrevImage();
+                    }
                 }
             });
         });
