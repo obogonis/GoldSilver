@@ -35,6 +35,14 @@
 .descr-adv{
 	font-size: 15px;
 }
+
+.container-fluid{
+	max-width: 990px;
+}
+
+.maxWidth{
+    max-width: 990px;
+}
 	
 
 }
@@ -115,6 +123,12 @@
 .title-hr{
 	padding-top: 5px;
 }
+.container-fluid{
+	max-width: 760px;
+}
+.title-catalogue{
+	padding-top: 65px;
+}
 }
 
 
@@ -170,6 +184,9 @@
 .logo{
 	margin-left: 0px;
 }
+.container-fluid{
+	max-width: 480px;
+}
 }
 	
 
@@ -224,5 +241,8 @@ nav{
 }
 .logo{
 	margin-left: 0px;
+}
+.container-fluid{
+	max-width: 320px;
 }
 }

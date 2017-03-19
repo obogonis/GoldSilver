@@ -1,5 +1,5 @@
 body {
-    min-width: 1170px;
+ /*min-width: 1170px; */
 }
 
 header {
@@ -20,6 +20,10 @@ nav {
     margin-top: 150px;
 }
 
+.maxWidth{
+    max-width: 1140px;
+}
+
 /* Menu */
 
 .navbarbox {
@@ -28,8 +32,6 @@ nav {
     box-shadow: 0px 2px 5px 0px rgba(128, 128, 128, 0.7);
 }
 
-.big-size {
-    width: 1270px;
 }
 
 .navbar-header p {
@@ -210,8 +212,8 @@ nav {
 
 #section2 { background-image: url(https://unsplash.it/1980/1280?image=1074); }
 
-#section3 { background-image: url(https://unsplash.it/1980/1280?image=1073); }
-*/
+#section3 { background-image: url(https://unsplash.it/1980/1280?image=1073); }*/
+
 
 .pages {
     position: fixed;
