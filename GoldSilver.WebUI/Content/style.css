@@ -266,10 +266,10 @@ nav {
     opacity: 0;
 }
 
-/* .image-block:hover .image-wrap{
+.image-block:hover .image-wrap{
   	opacity: 1;
   }
-*/
+
 .item-descr {
     text-align: center;
     color: white;
@@ -469,7 +469,7 @@ nav {
         }
 
 .description-details {
-    min-height: 100px;
+    min-height: 110px;
     text-align: center;
 }
 
