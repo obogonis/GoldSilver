@@ -48,7 +48,7 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 767px) {
+@media only screen and (max-width : 768px) {
 	/*Disable Animation on Mobile Devices*/
 	.animated {
 		/*CSS transitions*/
@@ -256,5 +256,6 @@ nav{
 	max-width: 320px;
 }
 #instagram-block .instra-image-block {
+
 }
 }
