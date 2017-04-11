@@ -149,7 +149,7 @@
 	margin-left: 22px;
 }
 
-	.menu li{
+.menu li{
 		display: block;
 		background-color: white;
 		opacity: 0,5;
@@ -177,6 +177,12 @@
 .descr-adv{
 	font-size: 10px;
 }
+
+.adv-block i {
+        font-size: 20px;
+        padding-bottom: 5px;
+}
+
 .small-title{
 	font-size: 15px;
 	padding-top: 20px;
@@ -235,6 +241,10 @@ nav{
 .descr-adv{
 	font-size: 10px;
 }
+.adv-block i {
+        font-size: 20px;
+        padding-bottom: 5px;
+}
 .small-title{
 	font-size: 15px;
 	padding-top: 20px;
@@ -244,5 +254,8 @@ nav{
 }
 .container-fluid{
 	max-width: 320px;
+}
+#instagram-block .instra-image-block {
+
 }
 }
