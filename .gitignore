@@ -15,6 +15,13 @@ GoldSilver.WebUI/bin/GoldSilver.Domain.pdb
 *.pdb
 *.dll
 GoldSilver.WebUI/obj/Debug/GoldSilver.WebUI.pdb
-GoldSilver.Domain/obj/Debug/GoldSilver.Domain.csprojResolveAssemblyReference.cache
 *.dll
 GoldSilver.Domain/bin/Debug/GoldSilver.Domain.pdb
+Backup/GoldSilver.WebUI/.vs/config/applicationhost.config
+*.suo
+Backup/GoldSilver.WebUI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.cache
+*.dll
+GoldSilver.Domain/bin/Debug/GoldSilver.Domain.pdb
+*.pdb
+*.cache

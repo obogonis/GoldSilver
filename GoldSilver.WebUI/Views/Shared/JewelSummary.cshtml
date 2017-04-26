@@ -3,16 +3,18 @@
 <div class="col-xs-12 col-md-6 col-lg-4 product-description">
 
 
-    @if (Model.Images.Count > 0)
-    {
+
         <div class="row">
             <div>
-                <a href="@Url.Action("Details", new { id = @Model.JewelryId })">
-                    <img width="200" height="200" src="@Url.Action("GetImageForTeaser", "Jewelries", new { Model.JewelryId })" />
-                </a>
+                @if (Model.Images.Count > 0)
+                {
+                    <a href="@Url.Action("Details", new { id = @Model.JewelryId })">
+                        <img width="200" height="200" src="@Url.Action("GetImageForTeaser", "Jewelries", new { Model.JewelryId })" />
+                    </a>
+                }
                 <div class="col-xs-2 col-md-2 col-lg-2 description-to-show-icons right-icon">
                     @using (Html.BeginForm("AddToFavorites", "Favorite"))
-                {
+                    {
                         @Html.HiddenFor(x => x.JewelryId)
                         @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
 
@@ -24,7 +26,7 @@
                 </div>
             </div>
         </div>
-    }
+ 
 @*<h2>@Html.RouteLink(@Model.Name, "JeweleryDetails", new { id = @Model.JewelryId })</h2>*@
 @*<p class="description">@Model.Description</p>*@
     <div class="row description-details">
