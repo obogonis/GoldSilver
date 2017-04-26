@@ -47,6 +47,40 @@
 
 }
 
+/* Ipad */
+@media only screen and (max-width: 768px) {
+	#mapcanvas{
+	width:420px; 
+	height:350px;
+}
+#modal-size{
+	width: 460px;
+	height: 500px;
+}
+#main-title-video{
+	font-size: 50px;
+}
+.descr-adv{
+	font-size: 12px;
+}
+.small-title{
+	font-size: 15px;
+	padding-top: 20px;
+}
+.logo{
+	margin-left: 0px;
+}
+.title-hr{
+	padding-top: 5px;
+}
+.container-fluid{
+	max-width: 760px;
+}
+.title-catalogue{
+	padding-top: 65px;
+}
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
 	/*Disable Animation on Mobile Devices*/

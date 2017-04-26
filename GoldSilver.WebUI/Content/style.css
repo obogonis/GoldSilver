@@ -483,12 +483,30 @@ description-to-show-icons button {
     margin-left: 10px;
 }
 
+.right-icon{
+    position:absolute !important;
+    top: 10px;
+    right: 20px;
+}
+
 .product-description .hover-description {
     display: none;
 }
 
 .btn-lg {
     background-color: white;
+}
+
+.black-icon{
+    color:black;
+}
+
+.rose-icon{
+    color:#db3084;
+}
+
+.catagory-name-color{
+    color:black;
 }
 
 /* Product details */
