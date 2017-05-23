@@ -25,3 +25,5 @@ Backup/GoldSilver.WebUI/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 GoldSilver.Domain/bin/Debug/GoldSilver.Domain.pdb
 *.pdb
 *.cache
+**/bin/*
+**/obj/*
