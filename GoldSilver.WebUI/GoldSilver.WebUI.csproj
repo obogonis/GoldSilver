@@ -229,6 +229,7 @@
     <Content Include="Content\js\npm.js" />
     <Content Include="Content\js\scrolling-nav.js" />
     <Content Include="Content\js\XSwitch.min.js" />
+    <Content Include="Content\js\YTPlayer.js" />
     <Content Include="Content\media.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\accordion.css" />
