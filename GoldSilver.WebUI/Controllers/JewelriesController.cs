@@ -60,11 +60,8 @@ namespace GoldSilver.WebUI.Controllers
             }
 
             /*TODO: need to refactor*/
-            try { jew.PrevJewelry = repository.Jewelries.Find(id - 1).JewelryId; }
-            catch { }
-            try { jew.NextJewelry = repository.Jewelries.Find(id + 1).JewelryId; }
-            catch { }
-
+            jew.PrevJewelry = _getPrevId((int)id);
+            jew.NextJewelry = _getNextId((int)id);
 
             return View(jew);
         }
@@ -316,5 +313,32 @@ namespace GoldSilver.WebUI.Controllers
             var list = repository.Images.Where(i => i.JewelryId == jewelryId).Select(i => i.Id);
             return JsonConvert.SerializeObject(list);
         }
+
+        #region private methods
+        
+        int _getPrevId(int id)
+        {
+            Jewelry jew = repository.Jewelries.Find(id - 1);
+
+            if (jew != null)
+                return jew.JewelryId;
+            else if ((id - 1) < 1)
+                return repository.Jewelries.Max(j => j.JewelryId);
+            else
+                return _getPrevId(id - 1);
+        }
+
+        int _getNextId(int id)
+        {
+            Jewelry jew = repository.Jewelries.Find(id + 1);
+
+            if (jew != null)
+                return jew.JewelryId;
+            else if ((id + 1) > repository.Jewelries.Max(j => j.JewelryId))
+                return 1;
+            else
+                return _getNextId(id + 1);
+        }
+        #endregion
     }
 }
