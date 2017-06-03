@@ -177,6 +177,8 @@
     <Compile Include="Infrastructure\Concrete\FormsAuthProvider.cs" />
     <Compile Include="Infrastructure\ImageHelper.cs" />
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
+    <Compile Include="Infrastructure\SmtpService.cs" />
+    <Compile Include="Models\ContactFormViewModel.cs" />
     <Compile Include="Models\JewelriesListViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\Menu.cs" />
@@ -200,7 +202,6 @@
     <Content Include="Content\img\inst-photo02.jpg" />
     <Content Include="Content\img\inst-photo03.jpg" />
     <Content Include="Content\img\inst-photo04.jpg" />
-    <Content Include="Content\img\jewelleryelios.html" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\main-catalogue-1.jpg" />
     <Content Include="Content\img\main-catalogue-2.jpg" />
@@ -287,6 +288,7 @@
     <Content Include="Content\img\main-catalogue-1.xcf" />
     <Content Include="Scripts\ie10-viewport-bug-workaround.js" />
     <Content Include="Scripts\jewlery-teaser.js" />
+    <None Include="Properties\PublishProfiles\GoldSilverWebUI20170601112054 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -334,6 +336,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutNew.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
+    <Content Include="Views\Home\_SubmitMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

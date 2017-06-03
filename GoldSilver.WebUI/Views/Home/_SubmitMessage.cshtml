@@ -1,0 +1,14 @@
+﻿@model bool
+
+@{
+    Layout = null;
+}
+
+@if (Model)
+{
+    <div class='alert alert-success'><strong>Відправлено!</strong> Повідомлення успішно відправлено.</div>
+}
+else
+{
+    <div class='alert alert-danger'><strong>Помилка!</strong> Сталася помилка під час спроби надіслати ваше повідомлення. Спробуйте ще раз пізніше.</div>
+}

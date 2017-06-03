@@ -1,4 +1,6 @@
-﻿@{
+﻿@model GoldSilver.WebUI.Models.ContactFormViewModel
+
+@{
     ViewBag.Title = "Contscts";
     Layout = "";
 }
@@ -21,6 +23,18 @@
     <title>@ViewBag.Title</title>
 </head>
 
+@{
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        LoadingElementId = "loading-area",
+        LoadingElementDuration = 1000,
+        Url = "/Home/Submit",
+        OnBegin = "HideForm",
+        OnFailure = "ShowFailure",
+        UpdateTargetId = "message-area"
+    };
+
+}
 <body>
     <header>
         <nav class="navbar navbar-fixed-top navbarbox">
@@ -67,27 +81,34 @@
     <div class="container contact-form">
         <div class="row">
             <div class="col-lg-4 form-box">
-                <form role="form" action="/home/contacts" method="post">
+                <form id="ContactForm" action="/Home/Submit" method="post">
+                    @Html.AntiForgeryToken()
+                    <div id="loading-area" class="col-lg-12 load" style="display:none;">
+                        <div class='alert alert-info'><strong>Sending...</strong></div>
+                    </div>
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label for="InputName">Ваше ім'я</label>
+                            <label for="Name">Ваше ім'я</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Введіть своє ім'я" required>
+                                <input type="text" class="form-control" name="Name" id="Name" placeholder="Введіть своє ім'я" required>
                                 <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
+                                @Html.ValidationMessageFor(m => m.Name)
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="InputEmail">Ваш Email</label>
+                            <label for="Email">Ваш Email</label>
                             <div class="input-group">
-                                <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Введіть свій Email" required>
+                                <input type="email" class="form-control" id="Email" name="Email" placeholder="Введіть свій Email" required>
                                 <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
+                                @Html.ValidationMessageFor(m => m.Email)
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="InputMessage">Повідомлення</label>
+                            <label for="Message">Повідомлення</label>
                             <div class="input-group">
-                                <textarea name="InputMessage" id="InputMessage" class="form-control" rows="10" placeholder="Введіть тут своє повідомлення" required></textarea>
+                                <textarea name="Message" id="Message" class="form-control" rows="10" placeholder="Введіть тут своє повідомлення" required></textarea>
                                 <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
+                                @Html.ValidationMessageFor(m => m.Message)
                             </div>
                         </div>
                         <div class="form-group">
@@ -95,12 +116,23 @@
                             <div class="input-group">
                                 <input type="text" class="form-control" name="InputReal" id="InputReal" required>
                                 <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
+                                @Html.ValidationMessageFor(m => m.InputReal)
                             </div>
                         </div>
-                        <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                        <input type="submit" name="submit" id="submit" value="Send" class="btn btn-info pull-right">
                     </div>
                 </form>
             </div>
+
+            <script type="text/javascript">
+                function HideForm() {
+                    $("#form-area").hide();
+                }
+                function ShowFailure() {
+                    $('#message-area')
+                        .html("<div class='alert alert-danger'><strong>Error!</strong>The server could not be contacted and your message has not been sent. Please check your internet connection and try again later.</div>");
+                }
+            </script>
 
             <div class="col-lg-7 col-lg-offset-1 form-box">
                 <div class="row">
