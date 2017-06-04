@@ -141,6 +141,19 @@
             complete: function () {
                 $('#loader').hide();
                 $('#add-more').show();
+
+                $('.glyphicon-hover').hover(function () {
+                    $(this).addClass('glyphicon-heart').removeClass('glyphicon-heart-empty');
+                }, function () {
+                    $(this).removeClass('glyphicon-heart').addClass('glyphicon-heart-empty');
+                });
+
+                $('.product-description').hover(function () {
+                    $(this).find('.description-to-show').removeClass('hover-description');
+                }, function () {
+                    $(this).find('.description-to-show').addClass('hover-description');
+                    });
+
             },
             eror: function () {
                 $('#loader').hide();

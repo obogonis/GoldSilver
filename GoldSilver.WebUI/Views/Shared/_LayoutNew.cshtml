@@ -19,42 +19,49 @@
     
 
     <script id="jewTmpl" type="text/x-jquery-tmpl">
-        <div class="col-xs-12 col-md-6 col-lg-3 product-description">
+
+        <div class="col-xs-12 col-md-6 col-lg-4 product-description">
+
             <div class="row">
                 <div>
                     <a href="/jewelry/${JewelryId}">
                         <img width="200" height="200" src="/Jewelries/GetImageForTeaser?JewelryId=${JewelryId}">
                     </a>
+                    <div class="col-xs-2 col-md-2 col-lg-2 description-to-show-icons right-icon">
+                        <form action="/Favorite/AddToFavorites" method="post">
+                            <input data-val="true" data-val-number="The field JewelryId must be a number." data-val-required="The JewelryId field is required." id="JewelryId" name="JewelryId" type="hidden" value="1"><input id="returnUrl" name="returnUrl" type="hidden" value="/jewelries">                        <button type="submit" class="btn btn-secondary btn-lg">
+                                <i class="glyphicon glyphicon-hover rose-icon glyphicon-heart-empty"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
+
             <div class="row description-details">
-                <div class="row">
+                <div class="row catagory-name-color">
                     <strong>${Category.CategoryName}</strong>
                     <br>
                     <br>
                 </div>
                 <div class="row description-to-show hover-description">
                     <div class="col-xs-6 col-md-6 col-lg-6">
+                        Метал: <strong>${Material.MaterialName}</strong>
+                        <br>
                         Вага: <strong>${Weight}</strong>
                         <br>
                         Артикул: <strong>${Article}</strong>
                     </div>
-                    <div class="col-xs-2 col-md-2 col-lg-2 description-to-show-icons">
-                        <form action="/Favorite/AddToFavorites" method="post">
-                            <input data-val="true" data-val-number="The field JewelryId must be a number." data-val-required="The JewelryId field is required." id="JewelryId" name="JewelryId" type="hidden" value="${JewelryId}"><input id="returnUrl" name="returnUrl" type="hidden" value="/">
-                            <button type="submit" class="btn btn-secondary btn-lg">
-                                <i class="glyphicon glyphicon-hover glyphicon-heart-empty"></i>
-                            </button>
-                        </form>
-                    </div>
-                    <div class="col-xs-2 col-md-2 col-lg-2 description-to-show-icons">
-                        <button type="submit" class="btn btn-secondary btn-lg">
-                            <a href="/jewelry/${JewelryId}"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                    <div class="col-xs-4 col-md-4 col-lg-4 col-xs-offset-4 col-md-offset-3 col-lg-offset-2 description-to-show-icons">
+                        <button type="submit" class="btn btn-secondary btn-lg description-link">
+                            <a href="/jewelry/${JewelryId}"><i class="glyphicon glyphicon-chevron-right black-icon"></i></a>
                         </button>
                     </div>
                 </div>
             </div>
+
+            <h4></h4>
         </div>
+
     </script>
 
     <title>@ViewBag.Title</title>
