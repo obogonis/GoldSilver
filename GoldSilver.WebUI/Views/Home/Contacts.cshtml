@@ -19,6 +19,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="~/Scripts/jquery.tmpl.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.min.js"></script>*@
 
     <title>@ViewBag.Title</title>
 </head>
@@ -80,48 +82,50 @@
 
     <div class="container contact-form">
         <div class="row">
-            <div class="col-lg-4 form-box">
-                <form id="ContactForm" action="/Home/Submit" method="post">
-                    @Html.AntiForgeryToken()
-                    <div id="loading-area" class="col-lg-12 load" style="display:none;">
-                        <div class='alert alert-info'><strong>Sending...</strong></div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <label for="Name">Ваше ім'я</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="Name" id="Name" placeholder="Введіть своє ім'я" required>
-                                <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
-                                @Html.ValidationMessageFor(m => m.Name)
-                            </div>
+            <div id="modalContactForm" class="modal fade" role="dialog">
+                <div class="col-lg-4 col-lg-offset-4 form-box">
+                    <form id="ContactForm" action="/Home/Submit" method="post">
+                        @Html.AntiForgeryToken()
+                        <div id="loading-area" class="col-lg-12 load" style="display:none;">
+                            <div class='alert alert-info'><strong>Sending...</strong></div>
                         </div>
-                        <div class="form-group">
-                            <label for="Email">Ваш Email</label>
-                            <div class="input-group">
-                                <input type="email" class="form-control" id="Email" name="Email" placeholder="Введіть свій Email" required>
-                                <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
-                                @Html.ValidationMessageFor(m => m.Email)
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="Name">Ваше ім'я</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="Name" id="Name" placeholder="Введіть своє ім'я" required>
+                                    <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
+                                    @Html.ValidationMessageFor(m => m.Name)
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Message">Повідомлення</label>
-                            <div class="input-group">
-                                <textarea name="Message" id="Message" class="form-control" rows="10" placeholder="Введіть тут своє повідомлення" required></textarea>
-                                <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
-                                @Html.ValidationMessageFor(m => m.Message)
+                            <div class="form-group">
+                                <label for="Email">Ваш Email</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="Email" name="Email" placeholder="Введіть свій Email" required>
+                                    <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
+                                    @Html.ValidationMessageFor(m => m.Email)
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="InputReal">Обрахуйте наступний вираз 4+3? (Перевірка на спам!)</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="InputReal" id="InputReal" required>
-                                <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
-                                @Html.ValidationMessageFor(m => m.InputReal)
+                            <div class="form-group">
+                                <label for="Message">Повідомлення</label>
+                                <div class="input-group">
+                                    <textarea name="Message" id="Message" class="form-control" rows="10" placeholder="Введіть тут своє повідомлення" required></textarea>
+                                    <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
+                                    @Html.ValidationMessageFor(m => m.Message)
+                                </div>
                             </div>
+                            <div class="form-group">
+                                <label for="InputReal">Обрахуйте наступний вираз 4+3? (Перевірка на спам!)</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="InputReal" id="InputReal" required>
+                                    <span class="input-group-addon"><small><i class="glyphicon glyphicon-ok form-control-feedback"></i></small></span>
+                                    @Html.ValidationMessageFor(m => m.InputReal)
+                                </div>
+                            </div>
+                            <input type="submit" name="submit" id="submit" value="Send" class="btn btn-info pull-right">
                         </div>
-                        <input type="submit" name="submit" id="submit" value="Send" class="btn btn-info pull-right">
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
 
             <script type="text/javascript">
@@ -132,6 +136,10 @@
                     $('#message-area')
                         .html("<div class='alert alert-danger'><strong>Error!</strong>The server could not be contacted and your message has not been sent. Please check your internet connection and try again later.</div>");
                 }
+
+                $('#modalContactForm').on('shown.bs.modal', function () {
+                    $('#myInput').focus();
+                });
             </script>
 
             <div class="col-lg-7 col-lg-offset-1 form-box">
@@ -151,7 +159,7 @@
                             <p>
                                 <span>gold.lviv@mail.ru </span>
                                 <br>
-                                Написати повідомлення
+                                <button class="btn btn-success" data-toggle="modal" data-target="#modalContactForm">Написати повідомлення</button>
                             </p>
                         </div>
                     </div>
@@ -169,18 +177,18 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvkw-6jtPZKht9yvnaObcM9G7a4YQAaSE&callback=initMap" async defer></script>
 
     <script>
-        function initMap() {
-            var location = { lat: 49.803213, lng: 23.992841 };
-            var centerPossition = { lat: 49.803213, lng: 23.990000 };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 17,
-                center: centerPossition
-            });
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
+                function initMap() {
+                    var location = { lat: 49.803213, lng: 23.992841 };
+                    var centerPossition = { lat: 49.803213, lng: 23.990000 };
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 17,
+                        center: centerPossition
+                    });
+                    var marker = new google.maps.Marker({
+                        position: location,
+                        map: map
+                    });
+                }
     </script>
 </body>
 </html>
