@@ -11,3 +11,11 @@ html,body {
     width: 100%;
     overflow: auto;
 }
+
+#section3 {
+    padding-bottom: 25px;
+}
+
+.small-title {
+    margin-bottom: 25px;
+}
