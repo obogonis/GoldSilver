@@ -281,7 +281,7 @@ namespace GoldSilver.WebUI.Controllers
         }
 
         /* Get resized image for jew teazer 200x200 */
-        [OutputCache(Duration = int.MaxValue, VaryByParam = "jewelryId")]
+        //[OutputCache(Duration = int.MaxValue, VaryByParam = "jewelryId")]
         public FileContentResult GetImageForTeaser(int jewelryId)
         {
             Jewelry jew = repository.Jewelries

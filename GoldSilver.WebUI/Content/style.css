@@ -1,5 +1,6 @@
-body {
- /*min-width: 1170px; */
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 header {
@@ -290,6 +291,11 @@ nav {
             font-weight: bold;
             text-decoration: none;
         }
+
+.description-link {
+    margin-top: 15px;
+    margin-left: 10px;
+}
 
 .title-catalogue {
     text-align: center;

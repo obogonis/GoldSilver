@@ -38,13 +38,13 @@
         <div class="row hover-description description-to-show">
             <div class="col-xs-6 col-md-6 col-lg-6">
                 Метал: <strong>@Model.Material.MaterialName</strong>
-                <br />
+                <br /> 
                 Вага: <strong>@Model.Weight</strong>
                 <br />
                 Артикул: <strong>@Model.Article</strong>
             </div>
-            <div class="col-xs-4 col-md-4 col-lg-4 description-to-show-icons">
-                <button type="submit" class="btn btn-secondary btn-lg">
+            <div class="col-xs-4 col-md-4 col-lg-4 col-xs-offset-4 col-md-offset-3 col-lg-offset-2 description-to-show-icons">
+                <button type="submit" class="btn btn-secondary btn-lg description-link">
                     <a href="@Url.Action("Details", new { id = @Model.JewelryId })"><i class="glyphicon glyphicon-chevron-right black-icon"></i></a>
                 </button>
             </div>

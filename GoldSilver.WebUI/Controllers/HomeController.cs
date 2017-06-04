@@ -16,7 +16,10 @@ namespace GoldSilver.WebUI.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            if (Request.Browser.IsMobileDevice)
+                return View("IndexMobile");
+            else
+                return View("Index");
         }
 
         public ActionResult Contacts()

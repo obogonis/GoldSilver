@@ -232,6 +232,7 @@
     <Content Include="Content\js\XSwitch.min.js" />
     <Content Include="Content\js\YTPlayer.js" />
     <Content Include="Content\media.css" />
+    <Content Include="Content\mobile.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -337,6 +338,7 @@
     <Content Include="Views\Shared\_LayoutNew.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Home\_SubmitMessage.cshtml" />
+    <Content Include="Views\Home\IndexMobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

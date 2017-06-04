@@ -292,4 +292,8 @@ nav{
 #instagram-block .instra-image-block {
 
 }
+
+.pages {
+    position: static;
+}
 }
