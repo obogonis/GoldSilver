@@ -1,0 +1,444 @@
+﻿@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="/Content/style.css">
+    <link rel="stylesheet" href="/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/media.css">
+    <link rel="stylesheet" href="/Content/fonts.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Content/mobile.css" />
+
+    <title>Ювелірні вироби та прикраси - ЕЛІОС</title>
+</head>
+
+<body id="main">
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid maxWidth">
+                @* big-size - temporary fix for fixed size *@
+                <div class="row">
+                    <div class="navbar-header">
+                        <!-- Icon humburger-->
+                        <button type="button" class="navbar-toggle collapsed menu-btn" data-toggle="collapse" data-target="#top_menu" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar" id="icon-color"></span>
+                            <span class="icon-bar" id="icon-color"></span>
+                            <span class="icon-bar" id="icon-color"></span>
+                        </button>
+                        <!-- logo-->
+                        <a href="index.html" class="navbar-brand">
+                            <img src="/Content/img/logo.png" alt="logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-right menu" id="top_menu">
+                        <ul class="menu">
+                            <li><a href="/" class="active-link">Головна</a></li>
+                            <li><a href="/jewelries">Каталог</a></li>
+                            <li><a href="/Home/Contacts">Контакти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Наші переваги -->
+    <div id="container" >
+
+            <div class="section content-section video-section" id="section0">
+                <div class="pattern-overlay">
+                    @*<div id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=HFz6ohjYHX4',containment:'#section0',autoPlay:true, mute:true, startAt:0, opacity:.8}">video bg</div>*@
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1 class="title" id="main-title-video">Ювелірна майстерня ELIOS</h1>
+                                <h3>Ювелірні вироби та прикраси зі срібла та золота у Львові</h3>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content-section video-section advantages" id="section1">
+                <section class="advantages">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 title-catalogue">
+                                <h2 class="title-hr small-title">Наші переваги</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                <div class="adv-block">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <p class="descr-adv">Ми надаємо повний спектр ювелірних послуг: виготовлення за каталогом, виготовлення за ескізом, виготовлення копій, ремонт, реставрація, гравіювання, мийка, чистка, полірування.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                <div class="adv-block">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    <p class="descr-adv">Ви можете замовити ексклюзивні ювелірні вироби за власними ескізами або зображеннями з інтернету. Приходьте зі своїми ідеями і наші ювеліри зможуть втілити їх в дорогоцінних металах. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                <div class="adv-block">
+                                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                    <p class="descr-adv">Плетіння ланцюжків ручної роботи: бісмарк, арабський бісмарк, кардинал, картьє, панцирне і якірне плетіння. Також литі ланцюжки і ланцюжки різної конфігурації будуть запропоновані Вам.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                <div class="adv-block">
+                                    <i class="fa fa-gift" aria-hidden="true"></i>
+                                    <p class="descr-adv">Надаємо послуги професійного гравіювання: ззовні та всередині будь-яких ювелірних виробів, на рівних та кривих поверхнях, гравіювання текстів будь-яким шрифтом, візерунків, а також відбитків пальців.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                <div class="adv-block">
+                                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                                    <p class="descr-adv">Ви зможете скористатися повним спектром послуг з ремонту та догляду за ювелірними виробами.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-6 hidden-xs">
+                                <div class="adv-block">
+                                    <i class="fa fa-magic" aria-hidden="true"></i>
+                                    <p class="descr-adv">Наші майстри зможуть виготовити копію будь-якого ювелірного виробу.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                <div class="adv-block">
+                                    <i class="fa fa-diamond" aria-hidden="true"></i>
+                                    <p class="descr-adv">Виготовляємо ювелірні прикраси лише з ВАШОГО МЕТАЛУ. Підійде будь-який брухт або банківські злитки.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-6 hidden-xs">
+                                <div class="adv-block">
+                                    <i class="fa fa-user-secret" aria-hidden="true"></i>
+                                    <p class="descr-adv">Для постійних клієнтів у нас існує гнучка система знижок!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Каталог ювелірних виробів -->
+            <div class="catalogue-main" id="section2">
+                <section class="catalogue-main">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 title-catalogue">
+                                <h2 class="title-cat title-hr small-title">Каталог ювелірних виробів</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Перстені</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/main-catalogue-1.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Кульчики</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/main-catalogue-2.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Печатки</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/main-catalogue-3.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 hidden-xs p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Брошки</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/test-img.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Браслети</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/main-catalogue-5.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Хрестики</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/main-catalogue-6.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 hidden-xs p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Кольє</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/test-img.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Підвіски</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/test-img.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Заручальні перстні</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/test-img.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Обручки</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/test-img.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 hidden-xs p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Комплекти</a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/test-img.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 hidden-xs p0">
+                                <div class="image-block">
+                                    <div class="image-wrap">
+                                        <div class="item-descr">
+                                            <a href="#">Перейти до каталогу</a>
+                                            <span class="glyphicon glyphicon-menu-right arrow" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/test-img.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="contacts" id="section3">
+                <section class="contacts">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 title-catalogue">
+                                <h2 class="title-hr small-title">Контакти</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="contacts-block">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <p>
+                                        <span>(067) 688-04-50</span><br>
+                                        Андрій
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contacts-block">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <p>
+                                        <span>gold.lviv@mail.ru </span>
+                                        <br>
+                                        Написати повідомлення
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contacts-block">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <p><span>м. Львів, вул. Наукова, 29а, 2-й поверх</span></p>
+                                    <button type="button" class="btn btn-primary btn-lg button-map" data-toggle="modal" data-target="#myModal">Дай карту!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="instagram-portfolio" id="section4">
+                <section>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 title-catalogue">
+                                <h2 class="title-hr small-title">Готові роботи на Instagram</h2>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="instagram-block" class="row">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
+                </section>
+
+
+            </div>
+
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="modal-size">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Карта</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div id="mapcanvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/Content/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js" integrity="sha256-uyKq3i+Mv8CWwJ2iheLNVB5fJWs6CJAJDIoEPrbUsUc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha256-rD86dXv7/J2SvI9ebmNi5dSuQdvzzrrN2puPca/ILls=" crossorigin="anonymous"></script>
+    @*<script src="/Content/js/XSwitch.min.js"></script>*@
+
+
+    @*  Instagram  *@
+
+    <script type="text/javascript">
+
+
+        jQuery(function ($) {
+
+            var tok = '3043155184.2f7669c.6813de387fa448bdb738d5d371ffa44c';
+            userid = '3043155184';
+            cnt = 18;
+
+            $.ajax({
+                url: 'https://api.instagram.com/v1/users/3043155184/media/recent',
+                dataType: 'jsonp',
+                type: 'GET',
+                data: { access_token: tok, count: cnt },
+                success: function (result) {
+                    for (x in result.data) {
+
+                        //if (result.data[x].type == 'image') {
+                            $('#instagram-block').append('<div class="col-md-2 col-sm-4 col-xs-6 p5">' +
+                                '<div class="instra-image-block">' +
+                                '<div class="image-wrap">' +
+                                '<div class="instra-item-descr-img">' +
+                                '<span class="glyphicon glyphicon-camera"></span>' +
+                                '</div>' +
+                                '</div>' +
+                                '<a href="' + result.data[x].link + '">' +
+                                '<img src="' + result.data[x].images.low_resolution.url + '" alt="" class="img-responsive" width="180" height="180" >' +
+                                '</a>' +
+                                '</div>' +
+                                '</div>');
+                            // .append('<li><img src="' + result.data[x].images.low_resolution.url + '"></li>');
+                            // result.data[x].images.thumbnail.url - URL картинки 150х150
+                            // result.data[x].images.standard_resolution.url - URL картинки 612х612
+                            // result.data[x].link - URL страницы данного поста в Инстаграм
+                        //}
+
+                    }
+
+
+                },
+                error: function (result) {
+                    console.log(result); // пишем в консоль об ошибках
+                }
+            });
+        });
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvkw-6jtPZKht9yvnaObcM9G7a4YQAaSE&callback=initMap" async defer></script>
+
+    <script>
+        function initMap() {
+            var location = { lat: 49.803213, lng: 23.992841 };
+            var map = new google.maps.Map(document.getElementById('mapcanvas'), {
+                zoom: 17,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus();
+            initMap();
+        });
+
+    </script>
+
+
+
+</body>
+</html>
