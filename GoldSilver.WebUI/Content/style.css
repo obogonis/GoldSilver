@@ -517,6 +517,11 @@ description-to-show-icons button {
 
 /* Product details */
 
+
+.left-arrow {
+    z-index: 100;
+}
+
 .product {
     height: 321px;
 }
