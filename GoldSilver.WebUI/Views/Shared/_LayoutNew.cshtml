@@ -16,12 +16,12 @@
     <script src="/Content/js/bootstrap.min.js"></script>
 
     @*@Scripts.Render("~/bundles/modernizr")
-    @Styles.Render("~/Content/css")*@
-    
+        @Styles.Render("~/Content/css")*@
+
 
     <script id="jewTmpl" type="text/x-jquery-tmpl">
 
-        <div class="col-xs-12 col-md-6 col-lg-4 product-description">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 product-description">
 
             <div class="row">
                 <div>
@@ -30,7 +30,8 @@
                     </a>
                     <div class="col-xs-2 col-md-2 col-lg-2 description-to-show-icons right-icon">
                         <form action="/Favorite/AddToFavorites" method="post">
-                            <input data-val="true" data-val-number="The field JewelryId must be a number." data-val-required="The JewelryId field is required." id="JewelryId" name="JewelryId" type="hidden" value="1"><input id="returnUrl" name="returnUrl" type="hidden" value="/jewelries">                        <button type="submit" class="btn btn-secondary btn-lg">
+                            <input data-val="true" data-val-number="The field JewelryId must be a number." data-val-required="The JewelryId field is required." id="JewelryId" name="JewelryId" type="hidden" value="1"><input id="returnUrl" name="returnUrl" type="hidden" value="/jewelries">
+                            <button type="submit" class="btn btn-secondary btn-lg">
                                 <i class="glyphicon glyphicon-hover rose-icon glyphicon-heart-empty"></i>
                             </button>
                         </form>
@@ -99,7 +100,7 @@
 
     </header>
 
-        <div class="container">
+    <div class="container">
 
         <div class="row row-offcanvas row-offcanvas-right main-contant">
 
@@ -126,9 +127,9 @@
         </footer>
 
     </div>
-<script>
-    $(document).ready(function () {
-            
+    <script>
+        $(document).ready(function () {
+
             $('.glyphicon-hover').hover(function () {
                 $(this).addClass('glyphicon-heart').removeClass('glyphicon-heart-empty');
             }, function () {
@@ -143,7 +144,7 @@
 
 
             var listOfImages = null;
-            var currentPos= 0;
+            var currentPos = 0;
             var jewId = $("#JewelryId").val();
 
             $.ajax({
@@ -156,8 +157,7 @@
                 }
             });
 
-            function MoveNextImage()
-            {
+            function MoveNextImage() {
                 currentPos++;
 
                 if (currentPos > (listOfImages.length - 1))
@@ -205,8 +205,7 @@
                 $(".fa-circle").removeClass("fa-circle").addClass("fa-circle-o");
 
                 $("#teaser-img-container .service1-item").each(function (index, value) {
-                    if ($(value).attr("img-id") == listOfImages[currentPos])
-                    {
+                    if ($(value).attr("img-id") == listOfImages[currentPos]) {
                         $(this).addClass("active");
                         $(this).find("i").removeClass("fa-circle-o").addClass("fa-circle");
                     }

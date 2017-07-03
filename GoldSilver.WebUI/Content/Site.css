@@ -204,7 +204,7 @@ description-to-show-icons button{
 }
 
 .product-info{
-		margin-top: 50px;
+	margin-top: 50px;
 }
 
 .content-wrapper {
@@ -283,4 +283,8 @@ description-to-show-icons button{
 
 .product-big-image img{
     margin: 0 auto;
+}
+
+.left-arrow {
+    z-index:100;
 }
