@@ -27,6 +27,7 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -198,6 +199,15 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts.css" />
     <Content Include="Content\img\Elios.png" />
+    <Content Include="Content\img\img-main-bonding-rings.jpg" />
+    <Content Include="Content\img\img-main-chains.jpg" />
+    <Content Include="Content\img\img-main-crosses.jpg" />
+    <Content Include="Content\img\img-main-earings.jpg" />
+    <Content Include="Content\img\img-main-others.jpg" />
+    <Content Include="Content\img\img-main-pendants.jpg" />
+    <Content Include="Content\img\img-main-rings.jpg" />
+    <Content Include="Content\img\img-main-seals.jpg" />
+    <Content Include="Content\img\img-main-wedding-rings.jpg" />
     <Content Include="Content\img\inst-photo01.jpg" />
     <Content Include="Content\img\inst-photo02.jpg" />
     <Content Include="Content\img\inst-photo03.jpg" />
@@ -289,6 +299,7 @@
     <Content Include="Content\img\main-catalogue-1.xcf" />
     <Content Include="Scripts\ie10-viewport-bug-workaround.js" />
     <Content Include="Scripts\jewlery-teaser.js" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\GoldSilverWebUI20170601112054 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />

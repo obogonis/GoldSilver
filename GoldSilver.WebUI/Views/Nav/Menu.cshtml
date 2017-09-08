@@ -1,7 +1,7 @@
 ﻿@model GoldSilver.WebUI.Models.Menu
 
 <div class="left-menu">
-    <h2 class="menu-title">By Category</h2>
+    <h2 class="menu-title">Категорії</h2>
     <ul class="list-group">
         @foreach (var link in Model.Categories)
         {
@@ -38,11 +38,11 @@
 </div>*@
 
 <div class="left-menu">
-    <h2 class="menu-title">By Gamestones</h2>
+    <h2 class="menu-title">Матеріали</h2>
     <ul class="list-group">
-        @foreach (var link in Model.Gemstones)
+        @foreach (var link in Model.Materials)
         {
-            @Html.RouteLink(link.GemstoneName, new
+            @Html.RouteLink(link.MaterialName, new
         {
             controller = "Jewelries",
             action = "List",
