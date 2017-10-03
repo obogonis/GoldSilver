@@ -60,8 +60,8 @@ namespace GoldSilver.WebUI.Controllers
             }
 
             /*TODO: need to refactor*/
-            jew.PrevJewelry = _getPrevId((int)id);
-            jew.NextJewelry = _getNextId((int)id);
+            jew.PrevJewelry = _getPrevId((int)id, jew.Category);
+            jew.NextJewelry = _getNextId((int)id, jew.Category);
 
             return View(jew);
         }
@@ -316,28 +316,34 @@ namespace GoldSilver.WebUI.Controllers
 
         #region private methods
         
-        int _getPrevId(int id)
+        int _getPrevId(int id, Category cat)
         {
-            Jewelry jew = repository.Jewelries.Find(id - 1);
+            var jews = repository.Jewelries.Where(j => ((j.CategoryId == cat.CategoryId)));
+
+            int maxId = jews.Max(j => j.JewelryId);
+            var jew = jews.FirstOrDefault(j => j.JewelryId == id - 1);
 
             if (jew != null)
                 return jew.JewelryId;
             else if ((id - 1) < 1)
-                return repository.Jewelries.Max(j => j.JewelryId);
+                return maxId;
             else
-                return _getPrevId(id - 1);
+                return _getPrevId(id - 1, cat);
         }
 
-        int _getNextId(int id)
+        int _getNextId(int id, Category cat)
         {
-            Jewelry jew = repository.Jewelries.Find(id + 1);
+            var jews = repository.Jewelries.Where(j => ((j.CategoryId == cat.CategoryId)));
+
+            int minId = jews.Min(j => j.JewelryId);
+            var jew = jews.FirstOrDefault(j => j.JewelryId == id + 1);
 
             if (jew != null)
                 return jew.JewelryId;
             else if ((id + 1) > repository.Jewelries.Max(j => j.JewelryId))
-                return 1;
+                return minId;
             else
-                return _getNextId(id + 1);
+                return _getNextId(id + 1, cat);
         }
         #endregion
     }

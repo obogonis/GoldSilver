@@ -11,6 +11,7 @@
     <li class="breadcrumb-item"><a href="/">Головна</a></li>
     <li class="breadcrumb-item">@Html.ActionLink("Каталог", "List", "Jewelries")</li>
     <li class="breadcrumb-item active">
+
         @Html.RouteLink(Model.Category.CategoryName, new
         {
             controller = "Jewelries",
@@ -18,6 +19,7 @@
             category = Model.Category.UrlPath,
             page = 1
         })
+
     </li>
 </ol>
 
@@ -109,12 +111,12 @@
                         <p>@Model.Description</p>
                     </div>
 
-                    <hr />
+                    @*<hr />
                     <div class="btn-group wishlist">
                         <button type="button" class="btn btn-danger">
                             Додати до улюблених 
                         </button>
-                    </div>
+                    </div>*@
 
                     <hr />
 
@@ -131,13 +133,13 @@
                         <span class="fa fa-instagram"></span>
                     </a>*@
 
-                    <a class="btn btn-social-icon btn-vk" href="http://vk.com/share.php?url=@Request.Url.AbsoluteUri" target="_blank">
+                    @*<a class="btn btn-social-icon btn-vk" href="http://vk.com/share.php?url=@Request.Url.AbsoluteUri" target="_blank">
                         <span class="fa fa-vk"></span>
-                    </a>
+                    </a>*@
 
-                    <a class="btn btn-social-icon btn-odnoklassniki" href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st._surl=@Request.Url.AbsoluteUri&title=Elios" target="_blank">
+                    @*<a class="btn btn-social-icon btn-odnoklassniki" href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st._surl=@Request.Url.AbsoluteUri&title=Elios" target="_blank">
                         <span class="fa fa-odnoklassniki"></span>
-                    </a>
+                    </a>*@
 
                     <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/share?url=@Request.Url.AbsoluteUri">
                         <span class="fa fa-twitter"></span>

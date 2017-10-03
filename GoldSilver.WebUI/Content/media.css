@@ -52,7 +52,7 @@
 @media only screen and (max-width: 768px) {
     #mapcanvas {
         width: 420px;
-        height: 350px;
+        height: 400px;
     }
 
     #modal-size {

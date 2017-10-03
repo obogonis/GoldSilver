@@ -207,20 +207,21 @@ nav {
 }
 
 
-/*#section0 { background-image: url(https://unsplash.it/1980/1280?image=1076); }*/
+#section0-mobile {
+    background-image: url('img/img-main-others.jpg');
+}
 
+#section1-mobile {
+    margin-bottom:20px;
+}
 /*#section1 { background-image: url(https://unsplash.it/1980/1280?image=1075); }
 
 #section2 { background-image: url(https://unsplash.it/1980/1280?image=1074); }
 
 #section3 { background-image: url(https://unsplash.it/1980/1280?image=1073); }*/
 
-
-.pages {
-    position: fixed;
-    right: 10px;
-    top: 50%;
-    list-style: none;
+.title-catalogue-mobile {
+    padding-top:20px;
 }
 
     .pages li {
@@ -387,6 +388,12 @@ nav {
     padding-bottom: 50px;
 }
 
+/*Instagram block mobile*/
+
+.instagram-portfolio-mobile {
+    background-color: #D6D6D6;
+}
+
 /*Contacts*/
 .contacts-block {
     text-align: center;
@@ -410,11 +417,14 @@ nav {
     background-color: #F2F2F2;
 }
 
-/*Map*/
-#myModal label {
-    width: auto !important;
-    display: inline !important;
-}
+    .contacts-mobile {
+        padding-bottom:50px;
+    }
+    /*Map*/
+    #myModal label {
+        width: auto !important;
+        display: inline !important;
+    }
 
 #myModal img {
     max-width: none !important;
@@ -431,9 +441,23 @@ nav {
     height: 750px;
 }
 
-#mapcanvas label {
-    width: auto !important;
-    display: inline !important;
+#modal-size-mobile {
+    width: 100%;
+}
+
+    #modal-size-mobile .modal-body {
+        padding: 0;
+        height: 500px;
+    }
+
+.modal-body {
+    width: 100%;
+    height: 80%;
+}
+
+#mapcanvas {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 #mapcanvas img {
