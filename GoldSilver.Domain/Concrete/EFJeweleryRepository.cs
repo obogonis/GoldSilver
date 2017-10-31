@@ -85,5 +85,17 @@ namespace GoldSilver.Domain.Concrete
             }
             return dbEntry;
         }
+
+        public Image DeleteImage(int imageId)
+        {
+            Image dbEntry = context.Images.Find(imageId);
+            if (dbEntry != null)
+            {
+                context.Images.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+
+        }
     }
 }

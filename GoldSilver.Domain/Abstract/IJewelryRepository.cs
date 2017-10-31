@@ -18,5 +18,6 @@ namespace GoldSilver.Domain.Abstract
 
         void SaveJewelry(Jewelry jewelry);
         Jewelry DeleteJew(int jewelryId);
+        Image DeleteImage(int imageId);
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using System.Web.Helpers;
 
 namespace GoldSilver.WebUI.Controllers
 {
@@ -28,7 +29,8 @@ namespace GoldSilver.WebUI.Controllers
         public ViewResult Edit(int id)
         {
             Jewelry jewel = repository.Jewelries
-            .FirstOrDefault(j => j.JewelryId == id);
+                .Include("Images")
+                .FirstOrDefault(j => j.JewelryId == id);
 
             ViewBag.CategoryId = new SelectList(repository.Categories, "CategoryId", "CategoryName", jewel.CategoryId);
             ViewBag.MaterialId = new SelectList(repository.Materials, "MaterialId", "MaterialName", jewel.MaterialId);
@@ -108,6 +110,18 @@ namespace GoldSilver.WebUI.Controllers
                 TempData["message"] = string.Format("{0} was deleted", deletedJew.Name);
             }
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult DeleteImg(Image img)
+        {
+            Image deletedImg = repository.DeleteImage(img.Id);
+            var msg = String.Empty;
+            if (deletedImg != null)
+            {
+                msg = string.Format("{0} was deleted", deletedImg.Id);
+            }
+            return Json(msg);
         }
     }
 }
