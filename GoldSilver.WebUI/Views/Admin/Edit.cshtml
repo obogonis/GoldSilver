@@ -15,7 +15,7 @@
         <h1>Edit "@Model.Name"</h1>
     }
     <p>
-        @Html.ActionLink("Повернутись", "Index", null, new { @class = "btn btn-success" })
+
     </p>
 
     @using (Html.BeginForm("Edit", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -25,6 +25,12 @@
         @Html.ValidationSummary()
 
         @Html.HiddenFor(model => model.JewelryId)
+
+        @Html.ActionLink("<- Повернутись", "Index", null, new { @class = "btn btn-default" })
+        @:|
+        <input class="btn btn-success" type="submit" value="Save" />
+
+        <br /><br /><br />
 
         <div class="form-group row">
             <div class="editor-label col-lg-2">
@@ -127,30 +133,34 @@
         </div>
 
         <div class="form-group row">
-            Upload new image:
-            <input class="multiple" type="file" name="files" multiple />
+            <div class="editor-label col-lg-2">
+                <label for="files">Images</label>
+            </div>
+            <div class="editor-field col-lg-10">
+                <input class="multiple btn btn-default" type="file" name="files" multiple />
+            </div>
         </div>
-
-        <input class="btn btn-success" type="submit" value="Save" />
-
     }
 
     <div class="form-group row">
         <div class="editor-label col-lg-2">Images</div>
         @foreach (var img in Model.Images)
         {
-            <div class="editor-field col-lg-2">
+            var imgId = "imgId-@img.Id";
+            <div class="editor-field col-lg-2" id="@imgId">
                 @if (img.ImageData.Count() == 0)
                 {
                     @:None
                 }
                 else
                 {
-                    using (Ajax.BeginForm("DeleteImg", "Admin", null, new AjaxOptions { }))
-                    {    
-                        <img width="150" height="150" src="@Url.Action("GetImage", "Jewelries", new { JewelryId = img.Id })" />
+                    using (Ajax.BeginForm("DeleteImg", "Admin", null, new AjaxOptions {
+                        InsertionMode = InsertionMode.Replace
+                    }))
+                    {
+                        <img class="img-edit" width="120" height="120" src="@Url.Action("GetImage", "Jewelries", new { JewelryId = img.Id })" />
                         @Html.HiddenFor(modelItem => img.Id)
-                        <input type="submit" class="btn btn-danger" value="x" />
+                        <input type="submit" class="btn btn-xs btn-danger delete-img" value="x" />
                     }
                 }
             </div>
@@ -160,6 +170,7 @@
 
 
 </div>
+
 <script type="text/javascript">
     $(function () {
         if (window.FileReader != null) {

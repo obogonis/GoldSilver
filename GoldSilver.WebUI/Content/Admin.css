@@ -86,3 +86,12 @@ DIV.Message {
     height: 5em;
     font-family: Segoe UI, Verdana;
 }
+
+.img-edit {
+    float: left;
+    margin: 5px;
+}
+
+.delete-img {
+    margin: 5px;
+}
