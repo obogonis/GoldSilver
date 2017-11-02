@@ -121,7 +121,7 @@ namespace GoldSilver.WebUI.Controllers
             {
                 msg = string.Format("{0} was deleted", deletedImg.Id);
             }
-            return Json(msg);
+            return RedirectToAction("Edit", new { id = deletedImg.JewelryId });
         }
     }
 }
