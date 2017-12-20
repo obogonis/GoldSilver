@@ -31,10 +31,10 @@
         <div class="item-container">
             <div class="container row">
 
-                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 left-arrow">
+                <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1 left-arrow">
                     @if (Model.PrevJewelry > 0)
                     {
-                        <a href="@Url.Action("Details", new { id = @Model.PrevJewelry })"><i class="glyphicon glyphicon-chevron-left glyphicon-big"></i></a>
+                        <a href="@Url.Action("Details", new { id = @Model.PrevJewelry })"><i class="glyphicon glyphicon-menu-left glyphicon-big"></i></a>
                     }
                 </div>
 
@@ -63,10 +63,10 @@
                     </div>
                 </div>
 
-                <div class="col-sm-1 col-xs-1 hidden-md hidden-lg">
+                <div class="col-sm-2 col-xs-1 hidden-md hidden-lg">
                     @if (Model.NextJewelry > 0)
                     {
-                        <a href="@Url.Action("Details", new { id = @Model.NextJewelry })"><i class="glyphicon glyphicon-chevron-right glyphicon-big"></i></a>
+                        <a href="@Url.Action("Details", new { id = @Model.NextJewelry })"><i class="glyphicon glyphicon-menu-right glyphicon-big"></i></a>
                     }
                 </div>
 
@@ -155,10 +155,10 @@
 
                 </div>
 
-                <div class="hidden-sm hidden-xs col-sm-1 col-md-1 col-lg-1">
+                <div class="hidden-sm hidden-xs col-sm-2 col-md-2 col-lg-1">
                     @if (Model.NextJewelry > 0)
                     {
-                        <a href="@Url.Action("Details", new { id = @Model.NextJewelry })"><i class="glyphicon glyphicon-chevron-right glyphicon-big"></i></a>
+                        <a href="@Url.Action("Details", new { id = @Model.NextJewelry })"><i class="glyphicon glyphicon-menu-right glyphicon-big"></i></a>
                     }
                 </div>
 

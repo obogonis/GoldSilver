@@ -40,7 +40,8 @@
                     <div class="col-xs-2 col-md-2 col-lg-2 description-to-show-icons right-icon">
                         <form action="/Favorite/AddToFavorites" method="post">
                             <input data-val="true" data-val-number="The field JewelryId must be a number." data-val-required="The JewelryId field is required." id="JewelryId" name="JewelryId" type="hidden" value="1"><input id="returnUrl" name="returnUrl" type="hidden" value="/jewelries">                        <button type="submit" class="btn btn-secondary btn-lg">
-                                <i class="glyphicon glyphicon-hover rose-icon glyphicon-heart-empty"></i>
+                                @*<i class="glyphicon glyphicon-hover rose-icon glyphicon-heart-empty"></i>*@
+                                <i class="glyphicon glyphicon-hover rose-icon glyphicon-circle-arrow-down"></i>
                             </button>
                         </form>
                     </div>
@@ -63,7 +64,7 @@
                     </div>
                     <div class="col-xs-4 col-md-4 col-lg-4 description-to-show-icons">
                         <button type="submit" class="btn btn-secondary btn-lg">
-                            <a href="/jewelry/${JewelryId}"><i class="glyphicon glyphicon-chevron-right black-icon"></i></a>
+                            <a href="/jewelry/${JewelryId}"><i class="glyphicon glyphicon-menu-right black-icon"></i></a>
                         </button>
                     </div>
                 </div>

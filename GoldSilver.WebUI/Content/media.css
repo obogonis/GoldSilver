@@ -1,5 +1,24 @@
 /*==========  Desktop First Method  ==========*/
 
+/* ----------- iPad Pro ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .btn-heart {
+        padding: 0px !important;
+        position: relative;
+        left: 25px;
+    }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
     #mapcanvas {
@@ -88,7 +107,11 @@
     .title-catalogue {
         padding-top: 65px;
     }
-}
+    .btn-heart {
+        padding: 1px 1px !important;
+        position: relative;
+        left: 15px;
+    }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
