@@ -1,7 +1,7 @@
 ﻿@model GoldSilver.WebUI.Models.ContactFormViewModel
 
 @{
-    ViewBag.Title = "Contscts";
+    ViewBag.Title = "Contаcts";
     Layout = "";
 }
 <!DOCTYPE html>
@@ -84,6 +84,10 @@
         <div class="row">
             <div id="modalContactForm" class="modal fade" role="dialog">
                 <div class="col-lg-4 col-lg-offset-4 form-box">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">x</button>
+                        <h4 class="modal-title title-form-modal">Маєте запитання? Залиште нам повідомлення!</h4>
+                    </div>
                     <form id="ContactForm" action="/Home/Submit" method="post">
                         @Html.AntiForgeryToken()
                         <div id="loading-area" class="col-lg-12 load" style="display:none;">
@@ -122,9 +126,12 @@
                                     @Html.ValidationMessageFor(m => m.InputReal)
                                 </div>
                             </div>
-                            <input type="submit" name="submit" id="submit" value="Send" class="btn btn-info pull-right">
+                            <input type="submit" name="submit" id="submit" value="Надіслати" class="btn btn-info pull-right button-map">
                         </div>
                     </form>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" type="button" data-dismiss="modal">Закрити</button>
+                    </div>
                 </div>
             </div>
 
@@ -159,7 +166,7 @@
                             <p>
                                 <span>gold.lviv@mail.ru </span>
                                 <br>
-                                <button class="btn btn-success" data-toggle="modal" data-target="#modalContactForm">Написати повідомлення</button>
+                                <button class="btn btn-success button-map" data-toggle="modal" data-target="#modalContactForm">Написати повідомлення</button>
                             </p>
                         </div>
                     </div>
