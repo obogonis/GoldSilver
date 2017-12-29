@@ -101,6 +101,13 @@ namespace GoldSilver.Domain.Entities
         public string CategoryName { get; set; }
         public int? Order { get; set; }
         public string UrlPath { get; set; }
+
+        public bool? ShowOnMain { get; set; }
+        public byte[] ImageData { get; set; }
+        [HiddenInput(DisplayValue = false)]
+        public string ImageMimeType { get; set; }
+        public string ImageDescription { get; set; }
+
     }
 
 }
