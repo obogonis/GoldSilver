@@ -1,0 +1,76 @@
+﻿@model IEnumerable<GoldSilver.Domain.Entities.Category>
+
+    @{
+        ViewBag.Title = "Categories";
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+
+
+    <div class="container">
+        <h2>Адміністрування категорій</h2>
+
+        <p>
+            <span class="alert alert-success hidden" id="success-message"></span>
+            <span class="alert alert-danger hidden" id="danger-message"></span>
+        </p>
+
+        <p>
+            @Html.ActionLink("Create New", "CreateCategory", null, new { @class = "btn btn-success" })
+        </p>
+
+        <table class="table table-striped table-bordered table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoryName)
+                </th>
+                <th class="NumericCol">
+                    @Html.DisplayNameFor(model => model.Order)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UrlPath)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShowOnMain)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ImageData)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ImageDescription)
+                </th>
+                <th>Action</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr id="row-@item.CategoryId">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoryName)
+                    </td>
+                    <td class="NumericCol">
+                        @Html.DisplayFor(modelItem => item.Order)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UrlPath)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShowOnMain)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ImageData)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ImageDescription)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "EditCategory", new { id = item.CategoryId }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("View", "Details", "Jewelries", new { id = item.CategoryId }, new { @class = "btn btn-success" })
+                        <a href="#" onclick="deleteJew(@item.CategoryId);" class="btn btn-danger glyphicon glyphicon-remove"></a>
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    </div>

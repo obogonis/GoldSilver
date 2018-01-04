@@ -491,14 +491,14 @@ nav {
     margin-bottom: 5px !important;
 }
 
-
-/* Products description */
-/* Product panel */
-#cnt1 {
-    background-color: rgba(215, 212, 212, 0.88);
-    width: 90%;
-    margin-bottom: 70px;
-}
+    
+    /* Products description */
+    /* Product panel */
+    #cnt1 {
+        background-color: rgba(215, 212, 212, 0.88);
+        width: 90%;
+        margin-bottom: 70px;
+    }
 
 .feature {
     padding: 20px 0;
@@ -520,7 +520,7 @@ nav {
         }
 
 .description-details {
-    min-height: 115px;
+    min-height: 130px;
     text-align: center;
 }
 
@@ -749,3 +749,48 @@ description-to-show-icons button {
     color: #db3084;
 }
 
+/*Arrow down*/
+.arrowDown,
+.arrowDown:before {
+    position: absolute;
+    left: 50%;
+    z-index:1;
+}
+
+.arrowDown {
+    width: 40px;
+    height: 40px;
+    top: 95%;
+    margin: -20px 0 0 -20px;
+    -webkit-transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+}
+
+    .arrowDown:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        margin: -10px 0 0 -10px;
+        border-left: none;
+        border-top: none;
+        border-right: 1px #fff solid;
+        border-bottom: 1px #fff solid;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: arrowDown;
+    }
+
+@keyframes arrowDown {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-10px, -10px);
+    }
+}

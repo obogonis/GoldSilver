@@ -26,6 +26,11 @@ namespace GoldSilver.WebUI.Controllers
             return View(repository.Jewelries.Include(j => j.Category).Include(j => j.Gemstone).Include(j => j.Material));
         }
 
+        public ViewResult Categories()
+        {
+            return View(repository.Categories);
+        }
+
         public ViewResult Edit(int id)
         {
             Jewelry jewel = repository.Jewelries
