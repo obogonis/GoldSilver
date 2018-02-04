@@ -79,28 +79,12 @@
     <Compile Include="Concrete\EFJeweleryRepository.cs" />
     <Compile Include="Entities\Favorite.cs" />
     <Compile Include="Entities\Jewelry.cs" />
-    <Compile Include="Migrations\201705231814492_InitialCreate.cs" />
-    <Compile Include="Migrations\201705231814492_InitialCreate.Designer.cs">
-      <DependentUpon>201705231814492_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712230844435_ShowOnMain.cs" />
-    <Compile Include="Migrations\201712230844435_ShowOnMain.Designer.cs">
-      <DependentUpon>201712230844435_ShowOnMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705231814492_InitialCreate.resx">
-      <DependentUpon>201705231814492_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712230844435_ShowOnMain.resx">
-      <DependentUpon>201712230844435_ShowOnMain.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
