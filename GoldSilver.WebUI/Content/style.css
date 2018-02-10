@@ -311,9 +311,45 @@ nav {
             text-decoration: none;
         }
 
+
+/* Mobile catalogue links */
+.item-descr-mob {
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+    .item-descr-mob a {
+        color: white;
+        text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+
+
+        .item-descr-mob a:hover {
+            color: white;
+            text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+.image-block-mob .image-wrap {
+    opacity: 1;
+}
+
+.image-block-mob .image-wrap {
+    background-color: rgba(219, 48, 132, 0.1);
+}
+
+.image-block-mob:hover .image-wrap {
+    background-color: rgba(219, 48, 132, 0.4);
+}
+
 .description-link {
-    // margin-top: 15px;
-    // margin-left: 10px;
     position: relative;
     left: 40px;
     top: 7px;
