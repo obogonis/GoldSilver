@@ -238,6 +238,7 @@
     <Content Include="Content\js\bootstrap\util.js" />
     <Content Include="Content\js\jqinstapics\jqinstapics.js" />
     <Content Include="Content\js\jqinstapics\jqinstapics.min.js" />
+    <Content Include="Content\js\mobile.js" />
     <Content Include="Content\js\npm.js" />
     <Content Include="Content\js\scrolling-nav.js" />
     <Content Include="Content\js\XSwitch.min.js" />
