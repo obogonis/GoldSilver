@@ -20,7 +20,7 @@ namespace GoldSilver.WebUI.Infrastructure
             message.Body = string.Format(body, contactForm.Name, contactForm.Email, contactForm.Message);
             message.IsBodyHtml = true;
 
-            using (SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 465))
+            using (SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587))
             {
                 //Fix for gmail
                 smtpClient.Credentials = new NetworkCredential("sodoma91@gmail.com", "s0d0maandriy");
