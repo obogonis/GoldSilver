@@ -240,6 +240,7 @@
     <Content Include="Content\js\jqinstapics\jqinstapics.min.js" />
     <Content Include="Content\js\mobile.js" />
     <Content Include="Content\js\npm.js" />
+    <Content Include="Content\js\script.js" />
     <Content Include="Content\js\scrolling-nav.js" />
     <Content Include="Content\js\XSwitch.min.js" />
     <Content Include="Content\js\YTPlayer.js" />
