@@ -157,3 +157,29 @@ function hoverVideo(e) {
 function hideVideo(e) {
     this.pause();
 }
+
+function showGoogleMaps() {
+
+    var latLng = new google.maps.LatLng(49.8034911, 23.9928643);
+    var centerPossition = new google.maps.LatLng(49.8039911, 23.9928643);
+
+    var mapOptions = {
+        zoom: 17, // initialize zoom level - the max value is 21
+        streetViewControl: false, // hide the yellow Street View pegman
+        scaleControl: true, // allow users to zoom the Google Map
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        center: centerPossition
+    };
+
+    map = new google.maps.Map(document.getElementById('google-maps'),
+        mapOptions);
+
+    // Show the default red marker at the location
+    marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
+    });
+}
+

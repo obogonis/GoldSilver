@@ -313,6 +313,12 @@ nav {
 
 
 /* Mobile catalogue links */
+
+#wrap-mobile {
+    background-color: black;
+    opacity: 0.5;
+}
+
 .item-descr-mob {
     text-align: center;
     color: white;
@@ -366,7 +372,7 @@ nav {
     overflow: hidden;
     text-align: center;
     font-size: 30px;
-    padding-top: 40px;
+    /*padding-top: 40px;*/
 }
 
     .title-hr:before,
@@ -467,7 +473,7 @@ nav {
     }
 
     .contacts-block p {
-        color: #5A5B5F;
+        /*color: #5A5B5F;*/
     }
 
         .contacts-block p span {
