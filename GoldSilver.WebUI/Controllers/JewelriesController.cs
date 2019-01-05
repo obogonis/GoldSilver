@@ -48,8 +48,9 @@ namespace GoldSilver.WebUI.Controllers
 
             Jewelry jew = repository
                 .Jewelries
-                .Include("Gemstone")
-                .Include("Category")
+                .Include("Gemstones")
+                .Include("Categories")
+                .Include("Materials")
                 .Include("Images")
                 .Where(j => j.JewelryId == id)
                 .First();
@@ -59,9 +60,9 @@ namespace GoldSilver.WebUI.Controllers
                 return HttpNotFound();
             }
 
-            /*TODO: need to refactor*/
-            jew.PrevJewelry = _getPrevId((int)id, jew.Category);
-            jew.NextJewelry = _getNextId((int)id, jew.Category);
+            /* TODO: need to refactor */
+            jew.PrevJewelry = _getPrevId((int)id, jew.Categories);
+            jew.NextJewelry = _getNextId((int)id, jew.Categories);
 
             return View(jew);
         }
@@ -90,9 +91,10 @@ namespace GoldSilver.WebUI.Controllers
                     ItemsPerPage = pageSize,
                     TotalItems = category == null ?
                                     repository.Jewelries.Count() :
-                                    repository.Jewelries.Where(e => (e.Category.UrlPath == category)
-                                        || (e.Material.UrlPath == category)
-                                        || (e.Gemstone.UrlPath == category)).Count()
+                                    repository.Jewelries.Where(e => (e.Categories.Any(c => c.UrlPath == category ))
+                                        || (e.Materials.Any(m => m.UrlPath == category))
+                                        || (e.Gemstones.Any(g => g.UrlPath == category)))
+                                    .Count()
                 },
 
                 CurrentCategory = category
@@ -103,12 +105,13 @@ namespace GoldSilver.WebUI.Controllers
             {
                 model.Jewelries = repository.Jewelries
                     .Include("Images")
-                    .Include("Material")
-                    .Include("Category")
+                    .Include("Materials")
+                    .Include("Categories")
+                    .Include("Gemstones")
                     .Where(j => category == null
-                        || j.Category.UrlPath == category
-                        || j.Material.UrlPath == category
-                        || j.Gemstone.UrlPath == category)
+                        || j.Categories.Any(c => c.UrlPath == category)
+                        || j.Materials.Any(c => c.UrlPath == category)
+                        || j.Gemstones.Any(c => c.UrlPath == category))
                     .OrderBy(orderByFunc)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize);
@@ -117,12 +120,13 @@ namespace GoldSilver.WebUI.Controllers
             {
                 model.Jewelries = repository.Jewelries
                     .Include("Images")
-                    .Include("Material")
-                    .Include("Category")
+                    .Include("Materials")
+                    .Include("Categories")
+                    .Include("Gemstones")
                     .Where(j => category == null
-                        || j.Category.UrlPath == category
-                        || j.Material.UrlPath == category
-                        || j.Gemstone.UrlPath == category)
+                        || j.Categories.Any(c => c.UrlPath == category)
+                        || j.Materials.Any(c => c.UrlPath == category)
+                        || j.Gemstones.Any(c => c.UrlPath == category))
                     .OrderByDescending(orderByFunc)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize);
@@ -155,9 +159,10 @@ namespace GoldSilver.WebUI.Controllers
                     ItemsPerPage = pageSize,
                     TotalItems = category == null ?
                                     repository.Jewelries.Count() :
-                                    repository.Jewelries.Where(e => (e.Category.UrlPath == category)
-                                        || (e.Material.UrlPath == category)
-                                        || (e.Gemstone.UrlPath == category)).Count()
+                                    repository.Jewelries.Where(e => (e.Categories.Any(c => c.UrlPath == category))
+                                        || (e.Materials.Any(m => m.UrlPath == category))
+                                        || (e.Gemstones.Any(g => g.UrlPath == category)))
+                                    .Count()
                 },
 
                 CurrentCategory = category
@@ -167,12 +172,13 @@ namespace GoldSilver.WebUI.Controllers
                 || (sortDirection == null))
             {
                 model.Jewelries = repository.Jewelries
-                    .Include("Material")
-                    .Include("Category")
+                    .Include("Materials")
+                    .Include("Categories")
+                    .Include("Gemstones")
                     .Where(j => category == null
-                        || j.Category.UrlPath == category
-                        || j.Material.UrlPath == category
-                        || j.Gemstone.UrlPath == category)
+                        || j.Categories.Any(c => c.UrlPath == category)
+                        || j.Materials.Any(c => c.UrlPath == category)
+                        || j.Gemstones.Any(c => c.UrlPath == category))
                     .OrderBy(orderByFunc)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize);
@@ -180,18 +186,17 @@ namespace GoldSilver.WebUI.Controllers
             else if (sortDirection.ToLower() == "desc")
             {
                 model.Jewelries = repository.Jewelries
-                    .Include("Material")
-                    .Include("Category")
+                    .Include("Materials")
+                    .Include("Categories")
+                    .Include("Gemstones")
                     .Where(j => category == null
-                        || j.Category.UrlPath == category
-                        || j.Material.UrlPath == category
-                        || j.Gemstone.UrlPath == category)
+                        || j.Categories.Any(c => c.UrlPath == category)
+                        || j.Materials.Any(c => c.UrlPath == category)
+                        || j.Gemstones.Any(c => c.UrlPath == category))
                     .OrderByDescending(orderByFunc)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize);
             }
-
-            Thread.Sleep(3000);
 
             return Json(model, JsonRequestBehavior.AllowGet);
         }
@@ -201,8 +206,9 @@ namespace GoldSilver.WebUI.Controllers
         {
             List<Jewelry> jews = repository
                 .Jewelries
-                .Include("Gemstone")
-                .Include("Category")
+                .Include("Gemstones")
+                .Include("Categories")
+                .Include("Materials")
                 .Where(j => j.Set == set)
                 .ToList();
 
@@ -316,9 +322,9 @@ namespace GoldSilver.WebUI.Controllers
 
         #region private methods
         
-        int _getPrevId(int id, Category cat)
+        int _getPrevId(int id, IEnumerable<Category> cats)
         {
-            var jews = repository.Jewelries.Where(j => ((j.CategoryId == cat.CategoryId)));
+            var jews = repository.Jewelries.ToList().Where(j => (j.Categories.Contains(cats.FirstOrDefault())));
 
             int maxId = jews.Max(j => j.JewelryId);
             var jew = jews.FirstOrDefault(j => j.JewelryId == id - 1);
@@ -328,12 +334,12 @@ namespace GoldSilver.WebUI.Controllers
             else if ((id - 1) < 1)
                 return maxId;
             else
-                return _getPrevId(id - 1, cat);
+                return _getPrevId(id - 1, cats);
         }
 
-        int _getNextId(int id, Category cat)
+        int _getNextId(int id, IEnumerable<Category> cats)
         {
-            var jews = repository.Jewelries.Where(j => ((j.CategoryId == cat.CategoryId)));
+            var jews = repository.Jewelries.ToList().Where(j => (j.Categories.Contains(cats.FirstOrDefault())));
 
             int minId = jews.Min(j => j.JewelryId);
             var jew = jews.FirstOrDefault(j => j.JewelryId == id + 1);
@@ -343,7 +349,7 @@ namespace GoldSilver.WebUI.Controllers
             else if ((id + 1) > repository.Jewelries.Max(j => j.JewelryId))
                 return minId;
             else
-                return _getNextId(id + 1, cat);
+                return _getNextId(id + 1, cats);
         }
         #endregion
     }

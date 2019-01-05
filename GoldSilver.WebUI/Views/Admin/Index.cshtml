@@ -33,16 +33,16 @@
                     @Html.DisplayNameFor(model => model.Weight)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Material)
+                    @Html.DisplayNameFor(model => model.Materials)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Gemstone)
+                    @Html.DisplayNameFor(model => model.Gemstones)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Fineness)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Category)
+                    @Html.DisplayNameFor(model => model.Categories)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Popularity)
@@ -66,16 +66,16 @@
                         @Html.DisplayFor(modelItem => item.Weight)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Material.MaterialName)
+                        @Html.DisplayFor(modelItem => item.MaterialsNames)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Gemstone.GemstoneName)
+                        @Html.DisplayFor(modelItem => item.GemstonesNames)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Fineness)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                        @Html.DisplayFor(modelItem => item.CategoriesNames)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Popularity)

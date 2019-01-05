@@ -47,20 +47,79 @@ namespace GoldSilver.Domain.Concrete
             }
             else
             {
-                Jewelry dbJewelry = context.Jewelries.Find(jewelry.JewelryId);
+                Jewelry dbJewelry = context.Jewelries
+                    .Include(j => j.Categories)
+                    .Include(j => j.Gemstones)
+                    .Include(j => j.Materials)
+                    .Single(j => j.JewelryId == jewelry.JewelryId);
+
                 if (dbJewelry != null)
                 {
                     dbJewelry.Name = jewelry.Name;
                     dbJewelry.Description = jewelry.Description;
-                    dbJewelry.MaterialId = jewelry.MaterialId;
                     dbJewelry.Weight = jewelry.Weight;
                     dbJewelry.JewelryId = jewelry.JewelryId;
-                    dbJewelry.GemstoneId = jewelry.GemstoneId;
-                    dbJewelry.CategoryId = jewelry.CategoryId;
                     dbJewelry.Article = jewelry.Article;
-
                     dbJewelry.Popularity = jewelry.Popularity;
                     dbJewelry.Set = jewelry.Set;
+
+                    if (jewelry.Categories != null && jewelry.Categories.Count > 0)
+                    {
+                        var categoriesToUpdate = jewelry.Categories
+                            .Select(cat => cat.CategoryId)
+                            .ToList();
+
+                        var newCategories = context.Categories
+                            .Where(c => categoriesToUpdate.Contains(c.CategoryId));
+
+                        dbJewelry.Categories.Clear();
+                        foreach (var newCat in newCategories)
+                        {
+                            dbJewelry.Categories.Add(newCat);
+                        }
+                    }
+                    else
+                    {
+                        dbJewelry.Categories.Clear();
+                    }
+
+                    if (jewelry.Gemstones != null && jewelry.Gemstones.Count > 0)
+                    {
+                        var gemstonesToUpdate = jewelry.Gemstones
+                        .Select(gem => gem.GemstoneId)
+                        .ToList();
+
+                        var newGemstones = context.Gemstones
+                            .Where(g => gemstonesToUpdate.Contains(g.GemstoneId));
+
+                        dbJewelry.Gemstones.Clear();
+                        foreach (var newGemstone in newGemstones)
+                        {
+                            dbJewelry.Gemstones.Add(newGemstone);
+                        }
+                    }
+                    else
+                    {
+                        dbJewelry.Gemstones.Clear();
+                    }
+
+                    if (jewelry.Materials != null && jewelry.Materials.Count > 0)
+                    {
+                        var materialsToUpdate = jewelry.Materials
+                        .Select(mat => mat.MaterialId)
+                        .ToList();
+                        var newMaterials = context.Materials
+                            .Where(m => materialsToUpdate.Contains(m.MaterialId));
+                        dbJewelry.Materials.Clear();
+                        foreach (var newMaterial in newMaterials)
+                        {
+                            dbJewelry.Materials.Add(newMaterial);
+                        }
+                    }
+                    else
+                    {
+                        dbJewelry.Materials.Clear();
+                    }
 
                     if (jewelry.Images != null)
                     {

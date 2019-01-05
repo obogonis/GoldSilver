@@ -1,18 +1,18 @@
-﻿@model GoldSilver.Domain.Entities.Jewelry
+﻿@model GoldSilver.WebUI.Models.JewelryViewModel
 
 @{
-    ViewBag.Title = "Admin: Edit " + @Model.Name;
+    ViewBag.Title = "Admin: Edit " + @Model.Jewelry.Name;
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <div class="container">
-    @if (Model.JewelryId == 0)
+    @if (Model.Jewelry.JewelryId == 0)
     {
         <h1>Add new</h1>
     }
     else
     {
-        <h1>Edit "@Model.Name"</h1>
+        <h1>Edit "@Model.Jewelry.Name"</h1>
     }
     <p>
 
@@ -24,7 +24,7 @@
         @Html.ValidationSummary(true)
         @Html.ValidationSummary()
 
-        @Html.HiddenFor(model => model.JewelryId)
+        @Html.HiddenFor(model => model.Jewelry.JewelryId)
 
         @Html.ActionLink("<- Повернутись", "Index", null, new { @class = "btn btn-default" })
         @:|
@@ -34,101 +34,131 @@
 
         <div class="form-group row">
             <div class="editor-label col-lg-2">
-                @Html.LabelFor(model => model.Name)
+                @Html.LabelFor(model => model.Jewelry.Name)
             </div>
             <div class="editor-field col-lg-10">
-                @Html.EditorFor(model => model.Name)
-                @Html.ValidationMessageFor(model => model.Name)
+                @Html.EditorFor(model => model.Jewelry.Name)
+                @Html.ValidationMessageFor(model => model.Jewelry.Name)
             </div>
         </div>
 
         <div class="form-group row">
             <div class="editor-label  col-lg-2">
-                @Html.LabelFor(model => model.Article)
+                @Html.LabelFor(model => model.Jewelry.InStock)
             </div>
             <div class="editor-field  col-lg-10">
-                @Html.EditorFor(model => model.Article)
-                @Html.ValidationMessageFor(model => model.Article)
+                @Html.EditorFor(model => model.Jewelry.InStock)
+                @Html.ValidationMessageFor(model => model.Jewelry.InStock)
             </div>
         </div>
 
         <div class="form-group row">
             <div class="editor-label  col-lg-2">
-                @Html.LabelFor(model => model.Description)
+                @Html.LabelFor(model => model.Jewelry.Price)
+            </div>
+            <div class="editor-field  col-lg-10">
+                @Html.EditorFor(model => model.Jewelry.Price)
+                @Html.ValidationMessageFor(model => model.Jewelry.Price)
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="editor-label  col-lg-2">
+                @Html.LabelFor(model => model.Jewelry.Article)
+            </div>
+            <div class="editor-field  col-lg-10">
+                @Html.EditorFor(model => model.Jewelry.Article)
+                @Html.ValidationMessageFor(model => model.Jewelry.Article)
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="editor-label  col-lg-2">
+                @Html.LabelFor(model => model.Jewelry.Description)
             </div>
             <div class="editor-field col-lg-10">
-                @Html.EditorFor(model => model.Description)
-                @Html.ValidationMessageFor(model => model.Description)
+                @Html.EditorFor(model => model.Jewelry.Description)
+                @Html.ValidationMessageFor(model => model.Jewelry.Description)
             </div>
         </div>
 
         <div class="form-group row">
             <div class="editor-label col-lg-2">
-                @Html.LabelFor(model => model.Fineness)
+                @Html.LabelFor(model => model.Jewelry.Fineness)
             </div>
             <div class="editor-field col-lg-10">
-                @Html.EditorFor(model => model.Fineness)
-                @Html.ValidationMessageFor(model => model.Fineness)
+                @Html.EditorFor(model => model.Jewelry.Fineness)
+                @Html.ValidationMessageFor(model => model.Jewelry.Fineness)
             </div>
         </div>
 
         <div class="form-group row">
             <div class="editor-label col-lg-2">
-                @Html.LabelFor(model => model.Weight)
+                @Html.LabelFor(model => model.Jewelry.Weight)
             </div>
             <div class="editor-field col-lg-10">
-                @Html.EditorFor(model => model.Weight)
-                @Html.ValidationMessageFor(model => model.Weight)
+                @Html.EditorFor(model => model.Jewelry.Weight)
+                @Html.ValidationMessageFor(model => model.Jewelry.Weight)
             </div>
         </div>
 
         <div class="form-group row">
             <div class="editor-label col-lg-2">
-                @Html.LabelFor(model => model.CategoryId, "Category")
+                @Html.LabelFor(model => model.Jewelry.Categories, "Categories")
             </div>
             <div class="editor-field col-lg-10">
-                @Html.DropDownList("CategoryId", String.Empty)
-                @Html.ValidationMessageFor(model => model.CategoryId)
+                @Html.ListBoxFor(m => m.SelectedJewelryCategories, Model.AllJewelryCategories)
+                @Html.ValidationMessageFor(model => model.Jewelry.Categories)
             </div>
         </div>
 
         <div class="form-group row">
             <div class="editor-label col-lg-2">
-                @Html.LabelFor(model => model.MaterialId, "Material")
+                @Html.LabelFor(model => model.Jewelry.Materials, "Materialials")
             </div>
             <div class="editor-field col-lg-10">
-                @Html.DropDownList("MaterialId", String.Empty)
-                @Html.ValidationMessageFor(model => model.MaterialId)
+                @Html.ListBoxFor(m => m.SelectedJewelryMaterials, Model.AllJewelryMaterials)
+                @Html.ValidationMessageFor(model => model.Jewelry.Materials)
             </div>
         </div>
 
         <div class="form-group row">
             <div class="editor-label col-lg-2">
-                @Html.LabelFor(model => model.GemstoneId, "Gemstone")
+                @Html.LabelFor(model => model.Jewelry.Gemstones, "Gemstones")
             </div>
             <div class="editor-field col-lg-10">
-                @Html.DropDownList("GemstoneId", String.Empty)
-                @Html.ValidationMessageFor(model => model.GemstoneId)
+                @Html.ListBoxFor(m => m.SelectedJewelryGemstones, Model.AllJewelryGemstones)
+                @Html.ValidationMessageFor(model => model.Jewelry.Gemstones)
             </div>
         </div>
 
         <div class="form-group row">
             <div class="editor-label col-lg-2">
-                @Html.LabelFor(model => model.Popularity)
+                @Html.LabelFor(model => model.Jewelry.Popularity)
             </div>
             <div class="editor-field col-lg-10">
-                @Html.EditorFor(model => model.Popularity)
-                @Html.ValidationMessageFor(model => model.Popularity)
+                @Html.EditorFor(model => model.Jewelry.Popularity)
+                @Html.ValidationMessageFor(model => model.Jewelry.Popularity)
             </div>
         </div>
 
         <div class="form-group row">
             <div class="editor-label col-lg-2">
-                @Html.LabelFor(model => model.Set)
+                @Html.LabelFor(model => model.Jewelry.Set)
             </div>
             <div class="editor-field col-lg-10">
-                @Html.EditorFor(model => model.Set)
-                @Html.ValidationMessageFor(model => model.Set)
+                @Html.EditorFor(model => model.Jewelry.Set)
+                @Html.ValidationMessageFor(model => model.Jewelry.Set)
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="editor-label  col-lg-2">
+                @Html.LabelFor(model => model.Jewelry.VideoFromYoutube)
+            </div>
+            <div class="editor-field  col-lg-10">
+                @Html.EditorFor(model => model.Jewelry.VideoFromYoutube)
+                @Html.ValidationMessageFor(model => model.Jewelry.VideoFromYoutube)
             </div>
         </div>
 
@@ -144,24 +174,30 @@
 
     <div class="form-group row">
         <div class="editor-label col-lg-2">Images</div>
-        @foreach (var img in Model.Images)
+        @if (Model.Jewelry.Images != null)
         {
-            var imgId = "imgId-@img.Id";
-            <div class="editor-field col-lg-2" id="@imgId">
-                @if (img.ImageData.Count() == 0)
+            <div class="image">
+                @foreach (var img in Model.Jewelry.Images)
                 {
-                    @:None
-                }
-                else
-                {
-                    using (Ajax.BeginForm("DeleteImg", "Admin", null, new AjaxOptions {
-                        InsertionMode = InsertionMode.Replace
-                    }))
+                    var imgId = "imgId-@img.Id";
+                    <div class="editor-field col-lg-2" id="@imgId">
+                        @if (img.ImageData.Count() == 0)
                     {
-                        <img class="img-edit" width="120" height="120" src="@Url.Action("GetImage", "Jewelries", new { JewelryId = img.Id })" />
-                        @Html.HiddenFor(modelItem => img.Id)
-                        <input type="submit" class="btn btn-xs btn-danger delete-img" value="x" />
-                    }
+                            @:None
+                }
+                    else
+                    {
+                        using (Ajax.BeginForm("DeleteImg", "Admin", null, new AjaxOptions
+                        {
+                            InsertionMode = InsertionMode.Replace
+                        }))
+                        {
+                                <img class="img-edit" width="120" height="120" src="@Url.Action("GetImage", "Jewelries", new { JewelryId = img.Id })" />
+                                @Html.HiddenFor(modelItem => img.Id)
+                                <input type="submit" class="btn btn-xs btn-danger delete-img" value="x" />
+                            }
+                        }
+                    </div>
                 }
             </div>
         }

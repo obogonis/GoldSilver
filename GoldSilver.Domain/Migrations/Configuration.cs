@@ -10,7 +10,6 @@ namespace GoldSilver.Domain.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "GoldSilver.Domain.Concrete.EFDbContext";
         }
 
         protected override void Seed(GoldSilver.Domain.Concrete.EFDbContext context)

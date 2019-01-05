@@ -21,7 +21,10 @@ namespace GoldSilver.Domain.Concrete
 
         public DbSet<Image> Images { get; set; }
 
-
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
     /*Test data*/
@@ -64,12 +67,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description. . Popularity = 3",
                 Weight = 1.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond,
+                Materials = new List<Material>() { gold, silver },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { diamond, ruby },
                 Popularity = 3
             });
 
@@ -81,12 +81,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2. Popularity = 2",
                 Weight = 0.15M,
                 Fineness = 555,
-                MaterialId = 2,
-                Material = silver,
-                CategoryId = 2,
-                Category = earring,
-                GemstoneId = 1,
-                Gemstone = ruby,
+                Materials = new List<Material>() { silver },
+                Categories = new List<Category>() { earring },
+                Gemstones = new List<Gemstone>() { ruby },
                 Popularity = 2
             });
 
@@ -98,12 +95,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2. Popularity = 1",
                 Weight = 3.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond,
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { diamond },
                 Popularity = 1
             });
 
@@ -115,12 +109,8 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 4.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { silver },
+                Categories = new List<Category>() { earring }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -131,12 +121,8 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 12.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
             });
 
             Jeweleries.Add(new Jewelry()
@@ -147,12 +133,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 22.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { ruby }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -163,12 +146,8 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 23.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -179,12 +158,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 2.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { diamond }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -195,12 +171,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 2.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { diamond }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -211,12 +184,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 2.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { diamond }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -227,12 +197,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 2.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { diamond }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -243,12 +210,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 2.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { ruby }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -259,12 +223,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 2.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { ruby }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -275,12 +236,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 2.15M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { ruby }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -291,12 +249,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 0.11M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { ruby }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -307,12 +262,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 0.11M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { ruby }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -323,12 +275,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 0.11M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { ruby }
             });
 
             Jeweleries.Add(new Jewelry()
@@ -339,12 +288,9 @@ namespace GoldSilver.Domain.Concrete
                 Description = "New description for jew 2",
                 Weight = 0.11M,
                 Fineness = 555,
-                MaterialId = 1,
-                Material = gold,
-                CategoryId = 1,
-                Category = ring,
-                GemstoneId = 1,
-                Gemstone = diamond
+                Materials = new List<Material>() { gold },
+                Categories = new List<Category>() { ring },
+                Gemstones = new List<Gemstone>() { ruby }
             });
 
             foreach (Category cat in Categories)

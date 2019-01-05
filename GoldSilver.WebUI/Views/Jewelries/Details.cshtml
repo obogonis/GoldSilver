@@ -12,11 +12,11 @@
     <li class="breadcrumb-item">@Html.ActionLink("Каталог", "List", "Jewelries")</li>
     <li class="breadcrumb-item active">
 
-        @Html.RouteLink(Model.Category.CategoryName, new
+        @Html.RouteLink(Model.Categories.FirstOrDefault().CategoryName, new
         {
             controller = "Jewelries",
             action = "List",
-            category = Model.Category.UrlPath,
+            category = Model.Categories.FirstOrDefault().UrlPath,
             page = 1
         })
 
@@ -92,17 +92,42 @@
                         </div>
                     }
 
+                    @if (Model.Categories != null)
+                    {
                     <div class="row">
                         <div class="col-sm-6">Категорія:</div>
-                        <div class="col-sm-6">@Model.Category.CategoryName</div>
+                        <div class="col-sm-6">
+                            @foreach (var category in @Model.Categories)
+                            {
+                                <span class="tag label label-info">@category.CategoryName</span>
+                            }
+                        </div>
                     </div>
+                    }
 
-
-                    @if (Model.GemstoneId != null)
+                    @if (Model.Gemstones != null)
                     {
                         <div class="row">
                             <div class="col-sm-6">Вставки:</div>
-                            <div class="col-sm-6">@Model.Gemstone.GemstoneName</div>
+                            <div class="col-sm-6">
+                                @foreach (var gemstone in Model.Gemstones)
+                                {
+                                    <span class="tag label label-info">@gemstone.GemstoneName</span>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    @if (Model.Materials != null)
+                    {
+                        <div class="row">
+                            <div class="col-sm-6">Вставки:</div>
+                            <div class="col-sm-6">
+                                @foreach (var material in Model.Materials)
+                                {
+                                    <span class="tag label label-info">@material.MaterialName</span>
+                                }
+                            </div>
                         </div>
                     }
                     <hr>
@@ -131,14 +156,6 @@
                     @* Шарити треба не сторінку, а картинку *@
                     @*<a class="btn btn-social-icon btn-instagram">
                         <span class="fa fa-instagram"></span>
-                    </a>*@
-
-                    @*<a class="btn btn-social-icon btn-vk" href="http://vk.com/share.php?url=@Request.Url.AbsoluteUri" target="_blank">
-                        <span class="fa fa-vk"></span>
-                    </a>*@
-
-                    @*<a class="btn btn-social-icon btn-odnoklassniki" href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st._surl=@Request.Url.AbsoluteUri&title=Elios" target="_blank">
-                        <span class="fa fa-odnoklassniki"></span>
                     </a>*@
 
                     <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/share?url=@Request.Url.AbsoluteUri">
