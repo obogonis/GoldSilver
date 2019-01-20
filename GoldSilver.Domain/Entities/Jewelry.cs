@@ -42,8 +42,6 @@ namespace GoldSilver.Domain.Entities
         [Display(Name = "В наявності")]
         public bool InStock { get; set; }
 
-
-        [Range(1, int.MaxValue, ErrorMessage = "Введіть в це поле додатнє ціле число.")]
         public int? Fineness { get; set; }
 
         [Range(0, int.MaxValue)]
@@ -62,6 +60,9 @@ namespace GoldSilver.Domain.Entities
 
         [NotMapped]
         public int NextJewelry { get; set; }
+
+        [NotMapped]
+        public decimal PriceConverted { get; set; }
 
         [Display(Name="URL for YouTube video")]
         public string VideoFromYoutube { get; set; }

@@ -76,7 +76,26 @@
                     @*<div class="product-rating"><i class="fa fa-star gold"></i><i class="fa fa-star gold"></i><i class="fa fa-star gold"></i><i class="fa fa-star gold"></i><i class="fa fa-star-o"></i></div>*@
                     <hr>
 
-                    @if (Model.Weight != null)
+                    @if (Model.PriceConverted != 0)
+                    {
+                        <div class="row">
+                            <div class="col-sm-6">Ціна:</div>
+                            <div class="col-sm-6">@Model.PriceConverted</div>
+                        </div>
+                    }
+
+                    <div class="row">
+                        @if (Model.InStock)
+                        {
+                        <div class="col-sm-6">В наявності</div>
+                        }
+                        else
+                        {
+                        <div class="col-sm-6">Під замовлення</div>
+                        }
+                    </div>
+
+                    @if (Model.Weight != 0)
                     {
                         <div class="row">
                             <div class="col-sm-6">Вага:</div>

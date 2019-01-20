@@ -12,6 +12,7 @@ using System.Web.Helpers;
 using GoldSilver.WebUI.Infrastructure;
 using System.IO;
 using System.Threading;
+using GoldSilver.WebUI.Infrastructure.Abstract;
 
 namespace GoldSilver.WebUI.Controllers
 {
@@ -22,10 +23,13 @@ namespace GoldSilver.WebUI.Controllers
         // GET: /Jewelries/
         IJewelryRepository repository;
         public int pageSize = 12;
+        private decimal exchangeRate;
+        private IAppSettings appSettings;
 
-        public JewelriesController(IJewelryRepository jewelRepository)
+        public JewelriesController(IJewelryRepository _jewelRepository, IAppSettings _appSettings)
         {
-            this.repository = jewelRepository;
+            this.repository = _jewelRepository;
+            this.appSettings = _appSettings;
         }
 
         public ActionResult Details(int? id = null, string category = null, int page = 1, string sortBy = null, string sortDirection = null)
@@ -54,6 +58,11 @@ namespace GoldSilver.WebUI.Controllers
                 .Include("Images")
                 .Where(j => j.JewelryId == id)
                 .First();
+
+            if (jew.Price != null)
+            {
+                jew.PriceConverted = (decimal)jew.Price * appSettings.ExchangeRate;
+            }
 
             if (jew == null)
             {
@@ -90,8 +99,8 @@ namespace GoldSilver.WebUI.Controllers
                     page = page,
                     ItemsPerPage = pageSize,
                     TotalItems = category == null ?
-                                    repository.Jewelries.Count() :
-                                    repository.Jewelries.Where(e => (e.Categories.Any(c => c.UrlPath == category ))
+                                    repository.Jewelries.Count(j => j.InStock) :
+                                    repository.Jewelries.Where(e => (e.Categories.Any(c => c.UrlPath == category ) && e.InStock)
                                         || (e.Materials.Any(m => m.UrlPath == category))
                                         || (e.Gemstones.Any(g => g.UrlPath == category)))
                                     .Count()
@@ -108,10 +117,11 @@ namespace GoldSilver.WebUI.Controllers
                     .Include("Materials")
                     .Include("Categories")
                     .Include("Gemstones")
-                    .Where(j => category == null
+                    .Where(j => j.InStock &&
+                        (category == null
                         || j.Categories.Any(c => c.UrlPath == category)
                         || j.Materials.Any(c => c.UrlPath == category)
-                        || j.Gemstones.Any(c => c.UrlPath == category))
+                        || j.Gemstones.Any(c => c.UrlPath == category)))
                     .OrderBy(orderByFunc)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize);
@@ -123,10 +133,11 @@ namespace GoldSilver.WebUI.Controllers
                     .Include("Materials")
                     .Include("Categories")
                     .Include("Gemstones")
-                    .Where(j => category == null
+                    .Where(j => j.InStock &&
+                        (category == null
                         || j.Categories.Any(c => c.UrlPath == category)
                         || j.Materials.Any(c => c.UrlPath == category)
-                        || j.Gemstones.Any(c => c.UrlPath == category))
+                        || j.Gemstones.Any(c => c.UrlPath == category)))
                     .OrderByDescending(orderByFunc)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize);

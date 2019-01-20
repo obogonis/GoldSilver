@@ -148,6 +148,7 @@
             </div>
             <div class="editor-field col-lg-10">
                 @Html.EditorFor(model => model.Jewelry.Set)
+                <span class="btn btn-success btn-sm" id="generate-new-set">Згенерувати</span>
                 @Html.ValidationMessageFor(model => model.Jewelry.Set)
             </div>
         </div>
@@ -209,6 +210,19 @@
 
 <script type="text/javascript">
     $(function () {
+
+        $("#generate-new-set").click(function () {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GenerateNewSet", "Admin")",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    $("#Jewelry_Set").val(data);
+                },
+            });
+        });
+
         if (window.FileReader != null) {
             $('#single').hide();
             $('.single').prop('disabled', true);

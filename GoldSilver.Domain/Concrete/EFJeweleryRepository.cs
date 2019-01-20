@@ -56,12 +56,16 @@ namespace GoldSilver.Domain.Concrete
                 if (dbJewelry != null)
                 {
                     dbJewelry.Name = jewelry.Name;
+                    dbJewelry.InStock = jewelry.InStock;
+                    dbJewelry.Price = jewelry.Price;
                     dbJewelry.Description = jewelry.Description;
+                    dbJewelry.Fineness = jewelry.Fineness;
                     dbJewelry.Weight = jewelry.Weight;
                     dbJewelry.JewelryId = jewelry.JewelryId;
                     dbJewelry.Article = jewelry.Article;
                     dbJewelry.Popularity = jewelry.Popularity;
                     dbJewelry.Set = jewelry.Set;
+                    dbJewelry.VideoFromYoutube = jewelry.VideoFromYoutube;
 
                     if (jewelry.Categories != null && jewelry.Categories.Count > 0)
                     {

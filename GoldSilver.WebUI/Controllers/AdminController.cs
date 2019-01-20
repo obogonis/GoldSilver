@@ -156,6 +156,17 @@ namespace GoldSilver.WebUI.Controllers
             return RedirectToAction("Edit", new { id = deletedImg.JewelryId });
         }
 
+        [HttpGet]
+        public JsonResult GenerateNewSet()
+        {
+            return Json(
+                repository.Jewelries.Select(j => j.Set)
+                    .AsEnumerable()
+                    .Select(s => Int32.Parse(s))
+                    .Max() 
+                + 1, JsonRequestBehavior.AllowGet);
+        }
+
         private JewelryViewModel createListItems(JewelryViewModel jewelryViewModel)
         {
             if(jewelryViewModel == null)
