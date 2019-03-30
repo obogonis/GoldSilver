@@ -152,6 +152,9 @@
 
     $("#add-more").click(function (event) {
         event.preventDefault();
+        if ($("#add-more").hasClass("disabled")) {
+            return;
+        }
         jQuery.ajax({
             url: '/Jewelries/GetPage?page=' + currentPage,
             beforeSend: function () {
@@ -180,7 +183,11 @@
                 $('#add-more').show();
             },
             success: function (result) {
-                var jeweleries = result.Jewelries;
+                var json = JSON.parse(result);
+                var jeweleries = json.JewelriesJson;
+                if (json.PagingInfo.TotalPages == json.PagingInfo.page) {
+                    $("#add-more").addClass("disabled")
+                }
                 $('#jewTmpl').tmpl(jeweleries).appendTo('.feature');
             }
         });

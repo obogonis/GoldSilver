@@ -9,6 +9,7 @@ namespace GoldSilver.WebUI.Models
     public class JewelriesListViewModel
     {
         public IEnumerable<Jewelry> Jewelries { get; set; }
+        public dynamic JewelriesJson { get; set; }
         public PagingInfo PagingInfo { get; set; }
         public string CurrentCategory { get; set; }
     }

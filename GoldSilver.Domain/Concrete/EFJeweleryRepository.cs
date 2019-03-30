@@ -11,7 +11,13 @@ namespace GoldSilver.Domain.Concrete
 {
     public class EFJeweleryRepository: IJewelryRepository
     {
-        private EFDbContext context = new EFDbContext();
+        public EFJeweleryRepository()
+        {
+            context = new EFDbContext();
+            context.Configuration.ProxyCreationEnabled = false;
+        }
+
+        private EFDbContext context;
 
         public DbSet<Jewelry> Jewelries
         {

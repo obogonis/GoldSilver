@@ -20,19 +20,22 @@ namespace GoldSilver.WebUI.Models
         {
             get
             {
-                bool result = Decimal.TryParse(ConfigurationManager.AppSettings["ExchangeRate"], out decimal value);
-
-                if ((result) || (value == 0M))
+                if ((_cachedExchangeRate == 0M) || (LastUpdatedExchangeRate < DateTime.UtcNow.AddHours(-1)))
                 {
-                    if ((_cachedExchangeRate == 0M) && (LastUpdatedExchangeRate < DateTime.UtcNow.AddHours(-1)))
-                    {
-                        _cachedExchangeRate = Math.Round(exangeService.GetExchangeRate().Result, 0);
-                        LastUpdatedExchangeRate = DateTime.UtcNow;
-                    }
-                    return _cachedExchangeRate;
-                }
+                    bool result = Decimal.TryParse(ConfigurationManager.AppSettings["ExchangeRate"], out decimal value);
 
-                return value;
+                    if ((result) && (value != 0M))
+                    {
+                        return value;
+                    }
+
+                    var exchangeRate = exangeService.GetExchangeRate().Result;
+                    Decimal.TryParse(ConfigurationManager.AppSettings["ExchangeСoefficient"] ?? "1", out var exchangeCoeficient);
+                    _cachedExchangeRate = Math.Round(exchangeRate * exchangeCoeficient, 2);
+
+                    LastUpdatedExchangeRate = DateTime.UtcNow;
+                }
+                return _cachedExchangeRate;
             }
             set
             {

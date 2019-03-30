@@ -162,8 +162,12 @@ namespace GoldSilver.WebUI.Controllers
             return Json(
                 repository.Jewelries.Select(j => j.Set)
                     .AsEnumerable()
-                    .Select(s => Int32.Parse(s))
-                    .Max() 
+                    .Select(str =>
+                    {
+                        Int32.TryParse(str, out var res);
+                        return res;
+                    })
+                    .Max()
                 + 1, JsonRequestBehavior.AllowGet);
         }
 

@@ -62,6 +62,7 @@ namespace GoldSilver.Domain.Entities
         public int NextJewelry { get; set; }
 
         [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:n2}")]
         public decimal PriceConverted { get; set; }
 
         [Display(Name="URL for YouTube video")]

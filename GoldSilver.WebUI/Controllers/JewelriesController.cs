@@ -78,7 +78,6 @@ namespace GoldSilver.WebUI.Controllers
 
         public ViewResult List(string category = null, int page = 1, string sortBy = null, string sortDirection = null)
         {
-
             Func<Jewelry, Object> orderByFunc = null;
 
             if (sortBy == "Name")
@@ -148,7 +147,6 @@ namespace GoldSilver.WebUI.Controllers
 
         public ActionResult GetPage(string category = null, int page = 2, string sortBy = null, string sortDirection = null)
         {
-
             Func<Jewelry, Object> orderByFunc = null;
 
             if (sortBy == "Name")
@@ -169,7 +167,7 @@ namespace GoldSilver.WebUI.Controllers
                     page = page,
                     ItemsPerPage = pageSize,
                     TotalItems = category == null ?
-                                    repository.Jewelries.Count() :
+                                    repository.Jewelries.Count(j => j.InStock) :
                                     repository.Jewelries.Where(e => (e.Categories.Any(c => c.UrlPath == category))
                                         || (e.Materials.Any(m => m.UrlPath == category))
                                         || (e.Gemstones.Any(g => g.UrlPath == category)))
@@ -182,45 +180,91 @@ namespace GoldSilver.WebUI.Controllers
             if (((sortDirection != null) && (sortDirection.ToLower() == "asc"))
                 || (sortDirection == null))
             {
-                model.Jewelries = repository.Jewelries
+                model.JewelriesJson = repository.Jewelries
                     .Include("Materials")
                     .Include("Categories")
                     .Include("Gemstones")
-                    .Where(j => category == null
+                    .Where(j => j.InStock
+                        && (category == null
                         || j.Categories.Any(c => c.UrlPath == category)
                         || j.Materials.Any(c => c.UrlPath == category)
-                        || j.Gemstones.Any(c => c.UrlPath == category))
+                        || j.Gemstones.Any(c => c.UrlPath == category)))
                     .OrderBy(orderByFunc)
                     .Skip((page - 1) * pageSize)
-                    .Take(pageSize);
+                    .Take(pageSize)
+                    .Select(j => new
+                    {
+                        JewelryId = j.JewelryId,
+                        Category = new
+                        {
+                            CategoryName = string.Join(",", j.Categories.Select(c => c.CategoryName).ToList())
+                        },
+                        Material = new
+                        {
+                            MaterialName = string.Join(",", j.Materials.Select(c => c.MaterialName).ToList())
+                        },
+                        Weight = j.Weight,
+                        Article = j.Article,
+                        PriceConverted = j.PriceConverted
+                    })
+                    .ToList();
             }
             else if (sortDirection.ToLower() == "desc")
             {
-                model.Jewelries = repository.Jewelries
+                model.JewelriesJson = repository.Jewelries
                     .Include("Materials")
                     .Include("Categories")
                     .Include("Gemstones")
-                    .Where(j => category == null
+                    .Where(j => j.InStock
+                        && (category == null
                         || j.Categories.Any(c => c.UrlPath == category)
                         || j.Materials.Any(c => c.UrlPath == category)
-                        || j.Gemstones.Any(c => c.UrlPath == category))
+                        || j.Gemstones.Any(c => c.UrlPath == category)))
                     .OrderByDescending(orderByFunc)
                     .Skip((page - 1) * pageSize)
-                    .Take(pageSize);
+                    .Take(pageSize)
+                    .Select(j => new
+                    {
+                        JewelryId = j.JewelryId,
+                        Category = new
+                        {
+                            CategoryName = string.Join(",", j.Categories.Select(c => c.CategoryName).ToList())
+                        },
+                        Material = new
+                        {
+                            MaterialName = string.Join(",", j.Materials.Select(c => c.MaterialName).ToList())
+                        },
+                        Weight = j.Weight,
+                        Article = j.Article,
+                        PriceConverted = j.PriceConverted
+                    })
+                    .ToList();
             }
 
-            return Json(model, JsonRequestBehavior.AllowGet);
+            var jss = new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Serialize };
+            var jsonModel = JsonConvert.SerializeObject(model, Formatting.Indented, jss);
+
+            return Json(jsonModel, JsonRequestBehavior.AllowGet);
         }
 
         [HttpGet]
-        public ActionResult GetJewelryBySet(string set)
+        public ActionResult GetJewelryBySet(string set, string jewId)
         {
-            List<Jewelry> jews = repository
+            var jews = repository
                 .Jewelries
                 .Include("Gemstones")
                 .Include("Categories")
                 .Include("Materials")
-                .Where(j => j.Set == set)
+                .ToList()
+                .Select(jew => new {
+                    JewelryId = jew.JewelryId,
+                    Set = jew.Set,
+                    Category = new { CategoryName = string.Join(",", jew.Categories.Select(c => c.CategoryName).ToList()) },
+                    Material = new { MaterialName = string.Join(",", jew.Materials.Select(c => c.MaterialName).ToList()) },
+                    Weight = jew.Weight,
+                    Article = jew.Article
+                })
+                .Where(j => j.Set == set && j.JewelryId != int.Parse(jewId))
                 .ToList();
 
             return Json(jews, JsonRequestBehavior.AllowGet);

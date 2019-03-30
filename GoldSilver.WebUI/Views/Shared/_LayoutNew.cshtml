@@ -266,10 +266,11 @@
 
         $(document).ready(function () {
 
-            var id = $('#Set').val();
+            var setId = $('#Set').val();
+            var jewId = $('#JewelryId').val();
 
             jQuery.ajax({
-                url: '/Jewelries/GetJewelryBySet?set=' + id,
+                url: '/Jewelries/GetJewelryBySet?set=' + setId + '&jewId=' + jewId,
                 success: function (result) {
                     $('#jewTmpl').tmpl(result).appendTo('#jewelries-set');
                 }
